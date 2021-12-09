@@ -4,15 +4,7 @@ shinyServer(function(input, output, session){
   waiter_hide()
   
   #################################################### Leer data ----
-  source("01_scripts/read_data.R")
-  
-  # Leer data para bubble plot (experimental)
-  # data_prov <- fread("https://raw.githubusercontent.com/geresacusco/dashboard-covid-19/main/data/data_provincial.csv", keepLeadingZeros = TRUE)
-  # data_prov$fecha <- as.Date(data_prov$fecha)
-  # data_prov <- subset(data_prov, fecha > as.Date("2020-03-12") & fecha < Sys.Date() - 1)
-  # data_densidad_prov <- fread("https://raw.githubusercontent.com/geresacusco/dashboard-covid-19/main/data/densidad/densidad_provincia.csv")
-  # bubble_data <- merge(data_prov, data_densidad_prov, by = "provincia")
-  # bubble_data <- mutate(bubble_data, incidencia = total_positivo/poblacion )
+  source("scripts/read_data.R")
   
   #################################################### Hacer data reactiva y subset por provincia y distrito ----
   
@@ -22,12 +14,12 @@ shinyServer(function(input, output, session){
   
     map_district <- read_data_map_district()
     data_dis <- read_data_dis()
-  # Regional (semaforo V2)
   
+  # Regional (semaforo V2)
   data_dpto_r <- reactive({
     data_dpto <- read_data_dpto()
   })
-
+  
   data_dpto_r2 <- reactive({
     data_dpto <- read_data_dpto()
     data_dpto <- filter(data_dpto, fecha > "2021-01-01")
@@ -72,16 +64,29 @@ shinyServer(function(input, output, session){
     data_semaforo_dis <- read_semaforo_dis()
   })
   
+  
   # Camas
   data_beds <- reactive({
     data_camas <- read_data_beds()
   })
   
-  # Provincial (test)
+  
+    # Provincial (test)
   data_corona <- reactive({
     data_res <- read_data_corona()
   })
-
+  
+  ############################################################################
+  #############################################################################
+  
+  # Data vacunas
+  data_vacunas_r <- reactive({
+    data_vacunas <- read_data_vacunas()
+  })
+  
+  #############################################################################
+  ############################################################################
+  
   ##### Selectores ----
   
   ## Provincia
@@ -150,6 +155,8 @@ shinyServer(function(input, output, session){
     data_trat_dis
   })
   
+  
+  
   # Colores ----
   
   myPal1 <- c(
@@ -216,6 +223,7 @@ shinyServer(function(input, output, session){
   })
   
   
+  
   ## Casos antigenica
   output$dygraph_region_casos_antigenica <- renderDygraph({
     
@@ -237,6 +245,28 @@ shinyServer(function(input, output, session){
     
   })
 
+  
+  ## Sintomáticos
+  output$dygraph_region_sintomaticos <- renderDygraph({
+    
+    dygraph(data_dpto_r()[, .(fecha, sintomaticos)]) %>%
+      dyAxis("x", label = "Fecha") %>%
+      dySeries("sintomaticos",label = "Número de casos sintomáticos") %>%
+      dyAxis("y", label = "Número de casos sintomáticos",valueFormatter = JS(valueFormatter_rounded) ) %>%
+      dyRangeSelector(dateWindow = c(data_dpto_r()[, max(fecha) - 80], data_dpto_r()[, max(fecha) + 1]),
+                      fillColor = "#003169", strokeColor = "00909e") %>%
+      dyOptions(useDataTimezone = TRUE, strokeWidth = 2,
+                fillGraph = FALSE, fillAlpha = 0.4,
+                colors = c("#003169", "", "")) %>%
+      dyHighlight(highlightSeriesOpts = list(strokeWidth = 2.5, pointSize = 4)) %>%
+      dyLegend(width = 150, show = "follow", hideOnMouseOut = TRUE, labelsSeparateLines = TRUE) %>%
+      dyRoller(showRoller = FALSE, rollPeriod = 7) %>%
+    dyShading(from = "0", to = "64.5", color = "rgb(116, 199, 184, 0.7)", axis = "y") %>%
+    dyShading(from = "64.5", to = "193.5", color = "rgb(255, 205, 163, 0.7)", axis = "y") %>%
+    dyShading(from = "193.5", to = "258", color = "rgb(239, 79, 79, 0.7)", axis = "y")
+    
+  })
+  
   
   ## Defunciones
   output$dygraph_region_defunciones <- renderDygraph({
@@ -262,13 +292,14 @@ shinyServer(function(input, output, session){
   ## Camas
   output$dygraph_region_camas <- renderDygraph({
     
-    dygraph(data_beds()[, .(DateRep, UCI_percent, NOUCI_percent, NIVELII_percent)]) %>%
+    dygraph(data_beds()[, .(fecha, UCI_percent, NOUCI_percent, NIVELII_percent, UCIN_percent)]) %>%
       dyAxis("x", label = "Fecha") %>%
       dyAxis("y", label = "Porcentaje de ocupación UCI",valueFormatter = JS(valueFormatter_rounded) ) %>%
       dySeries("UCI_percent", label = "% Ocupacion UCI") %>%
-      dySeries("NOUCI_percent", label = "% Ocupacion No UCI") %>%
+      dySeries("NOUCI_percent", label = "% Ocupacion No UCI ni UCIN") %>%
       dySeries("NIVELII_percent", label = "% Ocupacion Nivel II") %>%
-      dyRangeSelector(dateWindow = c(data_beds()[, max(DateRep) - 80], data_beds()[, max(DateRep) + 1]),
+      dySeries("UCIN_percent", label = "% Ocupacion UCIN") %>%
+      dyRangeSelector(dateWindow = c(data_beds()[, max(fecha) - 80], data_beds()[, max(fecha) + 1]),
                       fillColor = c("#03045e", "#3a0ca3","#7371fc"), strokeColor = "#03045e") %>%
       dyOptions(useDataTimezone = TRUE, strokeWidth = 2,
                 fillGraph = FALSE, fillAlpha = 0.4,
@@ -697,6 +728,18 @@ shinyServer(function(input, output, session){
       dyRangeSelector() %>%
       dyOptions(colors = myPal2)
   })
+  
+  ##############################################################################
+  ##############################################################################
+  
+  output$plot6 <- renderDygraph({
+    dygraph(data) %>%
+      dyOptions( drawPoints = TRUE, pointSize = 4 )
+  })
+  
+  ##############################################################################
+  ##############################################################################
+  
   
   ############################ Código para graficar la data provincial ----
   

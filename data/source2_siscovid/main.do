@@ -14,6 +14,7 @@
 
 *use		"$source2_siscovid/input/data_dashboard.dta", clear
 use "D:\7. Work\covid_cusco\datos\output\data_dashboard.dta", clear
+
 drop 	ubigeo
 
 ** Quitar acentos a nombres de distritos

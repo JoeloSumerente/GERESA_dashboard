@@ -36,7 +36,7 @@
    * Jason						4
 
    *Establecer este valor para el usuario que actualmente usa el script
-   global user  3
+   global user  5
 	
    * Definir Globales
    * ---------------------
@@ -57,6 +57,9 @@
        global path "C:\Users\PC\Documents\GitHub\dashboard-covid-geresa\data" 
    }
    
+    if $user == 5 {
+       global path "C:\Users\PC\Documents\GitHub\GERESA_dashboard\data" 
+   }
    
 	global main					"$path"
 	global source1_camas		"$path/source1_camas"
@@ -97,7 +100,7 @@
    local parte2Do       0
 
    if (`parte2Do' == 1) { //Change the local above to run or not to run this file
-       do "$source1_camas/main.do" 
+       do "$source1_camas/main.do"
    }
  
 

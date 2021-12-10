@@ -28,6 +28,7 @@ library(geojsonR)
 library(waiter)
 
 ##--utilidades  ----
+source("functions/utils.R")
 colores <- c("#098ebb", "#fdc23a", "#e96449", "#818286")
 
 ##-- Componentes de header shiny ----

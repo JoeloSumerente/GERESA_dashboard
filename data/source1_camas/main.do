@@ -10,7 +10,7 @@
 
 *** 1. Importar data en excel
 
-import excel		"$source1_camas/input/disponibilidad_camas_hospitalarias.xlsx", sheet("Hoja1") firstrow clear
+import excel "$source1_camas/input/disponibilidad_camas_hospitalarias.xlsx", sheet("Hoja1") firstrow clear
 
 
 format fecha %tdCCYY-NN-DD

@@ -36,7 +36,7 @@
    * Jason						4
 
    *Establecer este valor para el usuario que actualmente usa el script
-   global user  5
+   global user 5
 	
    * Definir Globales
    * ---------------------

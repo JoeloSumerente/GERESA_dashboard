@@ -36,7 +36,7 @@
    * Jason						4
 
    *Establecer este valor para el usuario que actualmente usa el script
-   global user  3
+   global user  5
 	
    * Definir Globales
    * ---------------------
@@ -55,6 +55,10 @@
 
    if $user == 4 {
        global path "C:\Users\PC\Documents\GitHub\dashboard-covid-geresa\data" 
+   }
+   
+   if $user == 5 {
+       global path "C:\Users\PC\Documents\GitHub\GERESA_dashboard\data" 
    }
    
    

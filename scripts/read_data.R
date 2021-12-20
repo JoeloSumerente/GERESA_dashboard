@@ -2,7 +2,7 @@
 
 # Data departamental
 read_data_dpto <- function() {
-  data_dpto <- fread("https://raw.githubusercontent.com/Joelo21/GERESA_dashboard/main/data/source2_siscovid/output/output/data_regional.csv", keepLeadingZeros = TRUE)
+  data_dpto <- fread("https://raw.githubusercontent.com/Joelo21/GERESA_dashboard/main/data/source2_siscovid/output/data_regional.csv", keepLeadingZeros = TRUE)
   data_dpto$fecha <- as.Date(data_dpto$fecha)
   data_dpto <- subset(data_dpto, fecha > as.Date("2020-03-12") & fecha < Sys.Date() - 1)
   data_dpto <- mutate(data_dpto, xposi=log10(total_positivo), xini = log10(total_inicio))
@@ -44,7 +44,7 @@ read_data_map_district <- function() {
 
 # Data provincial
 read_data_prov <- function() {
-  data_prov <- fread("https://raw.githubusercontent.com/gorecuscogrds/dashboard-covid-geresa/main/data/source2_siscovid/output/data_provincial.csv", keepLeadingZeros = TRUE)
+  data_prov <- fread("https://raw.githubusercontent.com/Joelo21/GERESA_dashboard/main/data/source2_siscovid/output/data_provincial.csv", keepLeadingZeros = TRUE)
   data_prov$fecha <- as.Date(data_prov$fecha)
   data_prov <- subset(data_prov, fecha > as.Date("2020-03-12") & fecha < Sys.Date() - 1)
   data_prov <- mutate(data_prov, posi_molecular_percent = posi_molecular*100)
@@ -80,7 +80,7 @@ read_semaforo_dis <- function() {
 # Data vacunación
 
 read_data_vacunas <- function() {
-  data_vacunas <- fread("https://raw.githubusercontent.com/Joelo21/GERESA_dashboard/blob/main/data/source5_vacunas/vacunacion.csv")
+  data_vacunas <- fread("https://raw.githubusercontent.com/gorecuscogrds/dashboard-covid-geresa/main/data/source5_vacunas/vacunacion.csv")
   
   str(data_vacunas$fecha)
   data <- xts(x = data_vacunas$vacunados, order.by = data_vacunas$fecha)

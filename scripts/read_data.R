@@ -80,7 +80,7 @@ read_semaforo_dis <- function() {
 # Data vacunación
 
 read_data_vacunas <- function() {
-  data_vacunas <- fread("https://raw.githubusercontent.com/gorecuscogrds/dashboard-covid-geresa/main/data/source5_vacunas/vacunacion.csv")
+  data_vacunas <- fread("https://raw.githubusercontent.com/Joelo21/GERESA_dashboard/main/data/source5_vacunas/vacunacion.csv")
   
   str(data_vacunas$fecha)
   data <- xts(x = data_vacunas$vacunados, order.by = data_vacunas$fecha)

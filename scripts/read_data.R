@@ -2,7 +2,7 @@
 
 # Data departamental
 read_data_dpto <- function() {
-  data_dpto <- fread("https://raw.githubusercontent.com/gorecuscogrds/dashboard-covid-geresa/main/data/source2_siscovid/output/data_regional.csv", keepLeadingZeros = TRUE)
+  data_dpto <- fread("https://raw.githubusercontent.com/Joelo21/GERESA_dashboard/main/data/source2_siscovid/output/data_regional.csv", keepLeadingZeros = TRUE)
   data_dpto$fecha <- as.Date(data_dpto$fecha)
   data_dpto <- subset(data_dpto, fecha > as.Date("2020-03-12") & fecha < Sys.Date() - 1)
   data_dpto <- mutate(data_dpto, xposi=log10(total_positivo), xini = log10(total_inicio))
@@ -32,7 +32,7 @@ read_data_dis <- function() {
   data_dis <- mutate(data_dis, posi_antigenica_percent = posi_antigenica*100)  
   
   return(data_dis)
-  
+
 }
 
 # Data de mapa distrital
@@ -84,6 +84,6 @@ read_data_vacunas <- function() {
   
   str(data_vacunas$fecha)
   data <- xts(x = data_vacunas$vacunados, order.by = data_vacunas$fecha)
-}
+  }
 
 

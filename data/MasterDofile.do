@@ -58,7 +58,7 @@
    }
    
    if $user == 5 {
-       global path "C:\Users\PC\Documents\GitHub\GERESA_dashboard\data" 
+       global path "C:\Users\user\Documents\GitHub\GERESA_dashboard\data" 
    }
    
    

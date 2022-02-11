@@ -3,7 +3,7 @@ shinyServer(function(input, output, session){
   Sys.sleep(3) # plots
   waiter_hide()
   
-  #################################################### Leer data ----
+  installdash#################################################### Leer data ----
   source("scripts/read_data.R")
   
   #################################################### Hacer data reactiva y subset por provincia y distrito ----

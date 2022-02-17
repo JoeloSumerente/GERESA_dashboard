@@ -372,9 +372,9 @@ shinyServer(function(input, output, session){
       dyHighlight(highlightSeriesOpts = list(strokeWidth = 2.5, pointSize = 4)) %>%
       dyLegend(width = 150, show = "follow", hideOnMouseOut = TRUE, labelsSeparateLines = TRUE)  %>%
       dyRoller(showRoller = FALSE, rollPeriod = 7) %>%
-      dyShading(from = "0", to = "15", color = "rgb(116, 199, 184, 0.7)", axis = "y") %>%
-      dyShading(from = "15", to = "30", color = "rgb(255, 205, 163, 0.7)", axis = "y") %>%
-      dyShading(from = "30", to = "100", color = "rgb(239, 79, 79, 0.7)", axis = "y")
+      dyShading(from = "0", to = "25", color = "rgb(116, 199, 184, 0.7)", axis = "y") %>%
+      dyShading(from = "25", to = "70", color = "rgb(255, 205, 163, 0.7)", axis = "y") %>%
+      dyShading(from = "70", to = "100", color = "rgb(239, 79, 79, 0.7)", axis = "y")
     
   })
   

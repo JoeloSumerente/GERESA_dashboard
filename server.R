@@ -218,7 +218,7 @@ shinyServer(function(input, output, session){
       dyRoller(showRoller = FALSE, rollPeriod = 7) %>%
       dyShading(from = "0", to = "372.85", color = "rgb(116, 199, 184, 0.7)", axis = "y") %>%
       dyShading(from = "372.85", to = "1118.355", color = "rgb(255, 205, 163, 0.7)", axis = "y") %>%
-      dyShading(from = "1118.355", to = "1491.14", color = "rgb(239, 79, 79, 0.7)", axis = "y")
+      dyShading(from = "1118.355", to = "2500.14", color = "rgb(239, 79, 79, 0.7)", axis = "y")
     
   })
   
@@ -263,7 +263,7 @@ shinyServer(function(input, output, session){
       dyRoller(showRoller = FALSE, rollPeriod = 7) %>%
     dyShading(from = "0", to = "64.5", color = "rgb(116, 199, 184, 0.7)", axis = "y") %>%
     dyShading(from = "64.5", to = "193.5", color = "rgb(255, 205, 163, 0.7)", axis = "y") %>%
-    dyShading(from = "193.5", to = "258", color = "rgb(239, 79, 79, 0.7)", axis = "y")
+    dyShading(from = "193.5", to = "1400", color = "rgb(239, 79, 79, 0.7)", axis = "y")
     
   })
   
@@ -374,7 +374,7 @@ shinyServer(function(input, output, session){
       dyRoller(showRoller = FALSE, rollPeriod = 7) %>%
       dyShading(from = "0", to = "25", color = "rgb(116, 199, 184, 0.7)", axis = "y") %>%
       dyShading(from = "25", to = "70", color = "rgb(255, 205, 163, 0.7)", axis = "y") %>%
-      dyShading(from = "70", to = "100", color = "rgb(239, 79, 79, 0.7)", axis = "y")
+      dyShading(from = "70", to = "110", color = "rgb(239, 79, 79, 0.7)", axis = "y")
     
   })
   
@@ -385,7 +385,7 @@ shinyServer(function(input, output, session){
     dygraph(data_dpto_r2()[, .(fecha, posi_antigenica_percent)]) %>%
       dySeries("posi_antigenica_percent", label = "Tasa de positividad") %>%
       dyAxis("x", label = "Fecha") %>%
-      dyAxis("y", label = "Tasa de positividad", valueFormatter = JS(valueFormatter_percent), valueRange = c(0, 40) ) %>%
+      dyAxis("y", label = "Tasa de positividad", valueFormatter = JS(valueFormatter_percent), valueRange = c(0, 70) ) %>%
       dyRangeSelector(dateWindow = c(data_dpto_r2()[, max(fecha) - 30], data_dpto_r2()[, max(fecha) + 1]),
                       fillColor = "#142850", strokeColor = "#222d32") %>%
       dyOptions(useDataTimezone = TRUE, strokeWidth = 2,

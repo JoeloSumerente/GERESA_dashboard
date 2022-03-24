@@ -206,8 +206,8 @@ shinyServer(function(input, output, session){
     
     dygraph(data_dpto_r()[, .(fecha, positivo)]) %>%
       dyAxis("x", label = "Fecha") %>%
-      dySeries("positivo",label = "Número de casos") %>%
-      dyAxis("y", label = "Número de casos",valueFormatter = JS(valueFormatter_rounded) ) %>%
+      dySeries("positivo",label = "Numero de casos") %>%
+      dyAxis("y", label = "Numero de casos",valueFormatter = JS(valueFormatter_rounded) ) %>%
       dyRangeSelector(dateWindow = c(data_dpto_r()[, max(fecha) - 80], data_dpto_r()[, max(fecha) + 1]),
                       fillColor = "#003169", strokeColor = "00909e") %>%
       dyOptions(useDataTimezone = TRUE, strokeWidth = 2,
@@ -229,8 +229,8 @@ shinyServer(function(input, output, session){
     
     dygraph(data_dpto_r2()[, .(fecha, positivo_antigenica)]) %>%
       dyAxis("x", label = "Fecha") %>%
-      dySeries("positivo_antigenica",label = "Número de casos") %>%
-      dyAxis("y", label = "Número de casos",valueFormatter = JS(valueFormatter_rounded) ) %>%
+      dySeries("positivo_antigenica",label = "Numero de casos") %>%
+      dyAxis("y", label = "Numero de casos",valueFormatter = JS(valueFormatter_rounded) ) %>%
       dyRangeSelector(dateWindow = c(data_dpto_r2()[, max(fecha) - 80], data_dpto_r2()[, max(fecha) + 1]),
                       fillColor = "#003169", strokeColor = "00909e") %>%
       dyOptions(useDataTimezone = TRUE, strokeWidth = 2,
@@ -251,8 +251,8 @@ shinyServer(function(input, output, session){
     
     dygraph(data_dpto_r()[, .(fecha, sintomaticos)]) %>%
       dyAxis("x", label = "Fecha") %>%
-      dySeries("sintomaticos",label = "Número de casos sintomáticos") %>%
-      dyAxis("y", label = "Número de casos sintomáticos",valueFormatter = JS(valueFormatter_rounded) ) %>%
+      dySeries("sintomaticos",label = "Numero de casos sintomaticos") %>%
+      dyAxis("y", label = "Numero de casos sintomaticos",valueFormatter = JS(valueFormatter_rounded) ) %>%
       dyRangeSelector(dateWindow = c(data_dpto_r()[, max(fecha) - 80], data_dpto_r()[, max(fecha) + 1]),
                       fillColor = "#003169", strokeColor = "00909e") %>%
       dyOptions(useDataTimezone = TRUE, strokeWidth = 2,
@@ -272,9 +272,9 @@ shinyServer(function(input, output, session){
   output$dygraph_region_defunciones <- renderDygraph({
     
     dygraph(data_dpto_r()[, .(fecha, defunciones)]) %>%
-      dySeries("defunciones", label = "Número de defunciones") %>%
+      dySeries("defunciones", label = "Numero de defunciones") %>%
       dyAxis("x", label = "Fecha") %>%
-      dyAxis("y", label = "Número de defunciones",valueFormatter = JS(valueFormatter_rounded) ) %>%
+      dyAxis("y", label = "Numero de defunciones",valueFormatter = JS(valueFormatter_rounded) ) %>%
       dyRangeSelector(dateWindow = c(data_dpto_r()[, max(fecha) - 80], data_dpto_r()[, max(fecha) + 1]),
                       fillColor = "#142850", strokeColor = "#222d32") %>%
       dyOptions(useDataTimezone = TRUE, strokeWidth = 2,
@@ -294,7 +294,7 @@ shinyServer(function(input, output, session){
     
     dygraph(data_beds()[, .(fecha, UCI_percent, NOUCI_percent, NIVELII_percent, UCIN_percent)]) %>%
       dyAxis("x", label = "Fecha") %>%
-      dyAxis("y", label = "Porcentaje de ocupación UCI",valueFormatter = JS(valueFormatter_rounded) ) %>%
+      dyAxis("y", label = "Porcentaje de Ocupacion UCI",valueFormatter = JS(valueFormatter_rounded) ) %>%
       dySeries("UCI_percent", label = "% Ocupacion UCI") %>%
       dySeries("NOUCI_percent", label = "% Ocupacion No UCI ni UCIN") %>%
       dySeries("NIVELII_percent", label = "% Ocupacion Nivel II") %>%
@@ -567,7 +567,7 @@ shinyServer(function(input, output, session){
     dygraph(data_dpto_r()[, .(fecha, total_positivo, total_recuperado, total_sintomaticos, total_defunciones)],) %>%
       dySeries("total_positivo", label = "Positivos") %>%
       dySeries("total_recuperado", label = "Recuperados") %>%
-      dySeries("total_sintomaticos", label = "Sintomáticos") %>%
+      dySeries("total_sintomaticos", label = "Sintomaticos") %>%
       dySeries("total_defunciones", label = "Defunciones") %>%
       dyLegend(show = "follow", showZeroValues = TRUE, labelsDiv = NULL,
                labelsSeparateLines = FALSE, hideOnMouseOut = TRUE) %>%
@@ -624,7 +624,7 @@ shinyServer(function(input, output, session){
   output$plot4 <- renderDygraph({
     dygraph(data_dpto_r()[, .(fecha, total_positivo, total_inicio)],) %>%
       dySeries("total_positivo", label = "Total de casos positivos por covid-19") %>%
-      dySeries("total_inicio", label = "Total de casos de inicio de síntomas por covid-19") %>%
+      dySeries("total_inicio", label = "Total de casos de inicio de sintomas por covid-19") %>%
       dyLegend(show = "follow", showZeroValues = TRUE, labelsDiv = NULL,
                labelsSeparateLines = FALSE, hideOnMouseOut = TRUE) %>%
       dyCSS(textConnection("
@@ -679,7 +679,7 @@ shinyServer(function(input, output, session){
   output$plot5 <- renderDygraph({
     dygraph(data_dpto_r()[, .(fecha, xposi, xini)],) %>%
       dySeries("xposi", label = "Total de casos positivos por covid-19") %>%
-      dySeries("xini", label = "Total de casos de inicio de síntomas por covid-19") %>%
+      dySeries("xini", label = "Total de casos de inicio de sintomas por covid-19") %>%
       dyLegend(show = "follow", showZeroValues = TRUE, labelsDiv = NULL,
                labelsSeparateLines = FALSE, hideOnMouseOut = TRUE) %>%
       dyCSS(textConnection("
@@ -754,7 +754,7 @@ shinyServer(function(input, output, session){
     dygraph(data_prov_subset()[, .(fecha, positivo)], main = input$prov) %>%
       dyAxis("x", label = "Fecha") %>%
       # dyAxis("y", label = "Número de casos", valueFormatter = JS(valueFormatter_rounded) ) %>%
-      dySeries("positivo", label = "Número de casos") %>%
+      dySeries("positivo", label = "Numero de casos") %>%
       dyRangeSelector(dateWindow = c(data_prov_subset()[, max(fecha) - 50], data_prov_subset()[, max(fecha) + 1]),
                       fillColor = "#003169", strokeColor = "00909e") %>%
       dyOptions(useDataTimezone = TRUE, strokeWidth = 2,
@@ -777,9 +777,9 @@ shinyServer(function(input, output, session){
     
     dygraph(data_prov_subset()[, .(fecha, defunciones)],
             main = input$prov) %>%
-      dyAxis("y", label = "Número de defunciones",  valueFormatter = JS(valueFormatter_rounded) ) %>%
+      dyAxis("y", label = "Numero de defunciones",  valueFormatter = JS(valueFormatter_rounded) ) %>%
       dyAxis("x", label = "Fecha") %>%
-      dySeries("defunciones", label = "Número de defunciones") %>%
+      dySeries("defunciones", label = "Numero de defunciones") %>%
       dyRangeSelector(dateWindow = c(data_prov_subset()[, max(fecha) - 50], data_prov_subset()[, max(fecha) + 1]),
                       fillColor = "#003169", strokeColor = "00909e") %>%
       dyOptions(useDataTimezone = TRUE, strokeWidth = 2,
@@ -938,8 +938,8 @@ shinyServer(function(input, output, session){
       dygraph(data_prov_subset()[, .(fecha, total_positivo, total_recuperado, total_sintomaticos, total_defunciones,total_inicio)],) %>%
         dySeries("total_positivo", label = "Total de casos positivos") %>%
         dySeries("total_recuperado", label = "Total de casos recuperados") %>%
-        dySeries("total_sintomaticos", label = "Total de casos sintomáticos") %>%
-        dySeries("total_inicio", label = "Total de casos por inicio de síntomas") %>%
+        dySeries("total_sintomaticos", label = "Total de casos sintomaticos") %>%
+        dySeries("total_inicio", label = "Total de casos por inicio de sintomas") %>%
         dySeries("total_defunciones", label = "Total de defunciones") %>%
         dyLegend(show = "follow", showZeroValues = TRUE, labelsDiv = NULL,
                  labelsSeparateLines = FALSE, hideOnMouseOut = TRUE) %>%
@@ -1061,9 +1061,9 @@ shinyServer(function(input, output, session){
             main = input$dis) %>%
       dyRangeSelector(dateWindow = c(data_dis_subset()[, max(fecha) - 50], data_dis_subset()[, max(fecha) + 1]),
                       fillColor = "#003169", strokeColor = "00909e") %>%
-      dySeries("positivo", label = "Número de casos") %>%
+      dySeries("positivo", label = "Numero de casos") %>%
       dyAxis("x", label = "Fecha") %>%
-      dyAxis("y",label = "Número de casos", valueFormatter = JS(valueFormatter_rounded) ) %>%
+      dyAxis("y",label = "Numero de casos", valueFormatter = JS(valueFormatter_rounded) ) %>%
       dyOptions(useDataTimezone = TRUE, strokeWidth = 2,
                 fillGraph = FALSE, fillAlpha = 0.4,
                 drawPoints = FALSE, pointSize = 3,
@@ -1086,8 +1086,8 @@ shinyServer(function(input, output, session){
     dygraph(data_dis_subset()[, .(fecha, defunciones)],
             main = input$dis) %>%
       dyAxis("x", label = "Fecha") %>%
-      dyAxis("y", label = "Número de defunciones" , valueFormatter = JS(valueFormatter_rounded) ) %>%
-      dySeries("defunciones", label = "Número de defunciones") %>%
+      dyAxis("y", label = "Numero de defunciones" , valueFormatter = JS(valueFormatter_rounded) ) %>%
+      dySeries("defunciones", label = "Numero de defunciones") %>%
       dyRangeSelector(dateWindow = c(data_dis_subset()[, max(fecha) - 50], data_dis_subset()[, max(fecha) + 1]),
                       fillColor = "#003169", strokeColor = "00909e") %>%
       dyAxis("y", valueFormatter = JS(valueFormatter_rounded) ) %>%
@@ -1246,8 +1246,8 @@ shinyServer(function(input, output, session){
     dygraph(data_dis_subset()[, .(fecha, total_positivo, total_recuperado, total_sintomaticos, total_defunciones, total_inicio)],) %>%
       dySeries("total_positivo", label = "Total de casos positivos") %>%
       dySeries("total_recuperado", label = "Total de casos recuperados") %>%
-      dySeries("total_sintomaticos", label = "Total de casos sintomáticos") %>% 
-      dySeries("total_inicio", label = "Total de casos por inicio de síntomas") %>%
+      dySeries("total_sintomaticos", label = "Total de casos sintomaticos") %>% 
+      dySeries("total_inicio", label = "Total de casos por inicio de sintomas") %>%
       dySeries("total_defunciones", label = "Total de defunciones") %>%
       dyLegend(show = "follow", showZeroValues = TRUE, labelsDiv = NULL,
                labelsSeparateLines = FALSE, hideOnMouseOut = TRUE) %>%

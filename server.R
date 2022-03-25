@@ -732,11 +732,11 @@ shinyServer(function(input, output, session){
   ##############################################################################
   ##############################################################################
   
-  output$plot6 <- renderDygraph({
-    dygraph(data) %>%
-      dyOptions( drawPoints = TRUE, pointSize = 4 )
-  })
-  
+  # output$plot6 <- renderDygraph({
+  #   dygraph(data) %>%
+  #     dyOptions( drawPoints = TRUE, pointSize = 4 )
+  # })
+
   ##############################################################################
   ##############################################################################
   

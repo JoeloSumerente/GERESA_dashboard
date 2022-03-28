@@ -238,7 +238,7 @@ exponernos al COVID-19, necesitamos cuidarnos y cuidar a los nuestros.
                 # Fila 2
 
                 fluidRow(
-                  tabBox(title = h4(strong("Casos acumulados de Covid-19: Región Cusco (I)")),
+                  tabBox(title = h4(strong("Casos acumulados de Covid-19: RegiÃ³n Cusco (I)")),
                          tabPanel("Lineal",
                                   tabsetPanel(
                                     tabPanel("Grafico",dygraphOutput("plot3"),

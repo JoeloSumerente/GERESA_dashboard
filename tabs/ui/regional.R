@@ -98,7 +98,9 @@ actividades, siempre tomando en consideracion las medidas de seguridad sanitaria
 otros colores. En todo momento se deberian tomar en cuenta las medidas de seguridad sanitaria. 
 "))
                                   )),
-                                                                           
+   
+        
+                                                                                                                  
                          tabPanel("Tasa de positividad antigenica",
                                   tabsetPanel(
                                     tabPanel("Grafico", dygraphOutput("dygraph_region_positividad_antigenica"),
@@ -120,6 +122,7 @@ otros colores. En todo momento se deberian tomar en cuenta las medidas de seguri
 "))
                                   )),
 
+                         
                          tabPanel("Sintomaticos",
                                   tabsetPanel(
                                     tabPanel("Grafico",dygraphOutput("dygraph_region_sintomaticos"),
@@ -140,6 +143,9 @@ otros colores. En todo momento se deberían tomar en cuenta las medidas de seguri
 "))
                                   )),
                       
+                         
+                         
+                         
                     tabPanel("Casos",
                              tabsetPanel(
                                tabPanel("Grafico",dygraphOutput("dygraph_region_casos"),
@@ -162,6 +168,10 @@ otros colores. En todo momento se deberian tomar en cuenta las medidas de seguri
                              )),
 
 
+
+
+
+
 tabPanel("Casos antigenica",
          tabsetPanel(
            tabPanel("GrÃ¡fico",dygraphOutput("dygraph_region_casos_antigenica"),
@@ -182,6 +192,8 @@ actividades, siempre tomando en consideración las medidas de seguridad sanitaria
 otros colores. En todo momento se deberian tomar en cuenta las medidas de seguridad sanitaria. 
 "))
          )),
+
+
 
 
                     tabPanel("Defunciones",

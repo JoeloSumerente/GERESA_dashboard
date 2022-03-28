@@ -17,7 +17,7 @@ read_data_prov <- function() {
   data_prov <- fread("https://raw.githubusercontent.com/Joelo21/GERESA_dashboard/main/data/source2_siscovid/output/data_provincial.csv", keepLeadingZeros = TRUE)
   data_prov$fecha <- as.Date(data_prov$fecha)
   data_prov <- subset(data_prov, fecha > as.Date("2020-03-12") & fecha < Sys.Date() - 1)
-  data_prov <- mutate(data_prov, posi_molecuxlar_percent = posi_molecular*100)
+  data_prov <- mutate(data_prov, posi_molecular_percent = posi_molecular*100)
   data_prov <- mutate(data_prov, posi_antigenica_percent = posi_antigenica*100)  
   return(data_prov)
 }

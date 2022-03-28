@@ -1,0 +1,13 @@
+name: GERESA_DASHBOARD_CUSCO
+title: GERESA_DASHBOARD_CUSCO
+username:
+account: geresadashboard
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5952595
+bundleId: 5736032
+url: https://geresadashboard.shinyapps.io/GERESA_DASHBOARD_CUSCO/
+when: 1648485048.36564
+lastSyncTime: 1648485048.36564
+asMultiple: FALSE
+asStatic: FALSE

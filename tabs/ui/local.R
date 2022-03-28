@@ -17,7 +17,7 @@ local <- tabPanel(title = "Nivel distrital",
                            id = "tab_semaforo_dis",
                            tabPanel("Tasa de positividad molecular",
                                     tabsetPanel(
-                                      tabPanel("GrÃ¡fico", dygraphOutput("dygraph_dis_positividad_molecular"),
+                                      tabPanel("Grafico", dygraphOutput("dygraph_dis_positividad_molecular"),
                                                h4(strong("Descripción de los ejes")),
                                                p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas moleculares (promedio de 7 dias)."), style = "color:blue")),
                                                p(div(strong("Eje X: "), em("Dias."), style = "color:blue"), "El primer dia de la serie corresponde al 13/03/2020, fecha en la cual se reporta
@@ -47,7 +47,7 @@ local <- tabPanel(title = "Nivel distrital",
 #                                                )),
                                       
                                       tabPanel("Resumen", "El semaforo COVID-19 de tasa de positividad molecular muestra
-                               el nivel de riesgo respecto al nÃºmero total de personas infectadas por muestras moleculares procesadas
+                               el nivel de riesgo respecto al numero total de personas infectadas por muestras moleculares procesadas
                                por COVID-19.", br(), br(),
                                                p("El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona
 las precauciones aumentan. En esta zona el nivel y velocidad de contagio por muestras moleculares es mucho más elevada.
@@ -75,7 +75,7 @@ las precauciones aumentan. En esta zona el nivel y velocidad de contagio es much
 Se recomienda salir de casa solo en casos excepcionales y tomando muy en cuenta las medidas
 de seguridad sanitaria. ", br(), br(),
                                                  "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar mas
-actividades, siempre tomando en consideraciÃ³n las medidas de seguridad sanitaria.", br(), br(),
+actividades, siempre tomando en consideración las medidas de seguridad sanitaria.", br(), br(),
                                                  "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
 otros colores. En todo momento se deberian tomar en cuenta las medidas de seguridad sanitaria. 
 "))

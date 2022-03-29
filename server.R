@@ -251,7 +251,7 @@ shinyServer(function(input, output, session){
     
     dygraph(data_dpto_r()[, .(fecha, sintomaticos)]) %>%
       dyAxis("x", label = "Fecha") %>%
-      dySeries("sintomaticos",label = "Numero de casos Sintomaticos") %>%
+      dySeries("sintomaticos",label = "Numero de casos Sintomáticos") %>%
       dyAxis("y", label = "Numero de casos sintomaticos",valueFormatter = JS(valueFormatter_rounded) ) %>%
       dyRangeSelector(dateWindow = c(data_dpto_r()[, max(fecha) - 80], data_dpto_r()[, max(fecha) + 1]),
                       fillColor = "#003169", strokeColor = "00909e") %>%
@@ -263,7 +263,7 @@ shinyServer(function(input, output, session){
       dyRoller(showRoller = FALSE, rollPeriod = 7) %>%
     dyShading(from = "0", to = "64.5", color = "rgb(116, 199, 184, 0.7)", axis = "y") %>%
     dyShading(from = "64.5", to = "193.5", color = "rgb(255, 205, 163, 0.7)", axis = "y") %>%
-    dyShading(from = "193.5", to = "1500", color = "rgb(239, 79, 79, 0.7)", axis = "y")
+    dyShading(from = "193.5", to = "1510", color = "rgb(239, 79, 79, 0.7)", axis = "y")
     
   })
   

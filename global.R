@@ -26,6 +26,7 @@ library(dygraphs)
 library(xts)
 library(geojsonR)
 library(waiter)
+library(rsconnect)
 
 ##--utilidades  ----
 colores <- c("#098ebb", "#fdc23a", "#e96449", "#818286")

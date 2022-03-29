@@ -1,20 +1,20 @@
 regional <- tabPanel(title = "Nivel Regional", 
                  value = "regional",
                  br(),
-                 HTML("<h1><center>An√°lisis de la Pandemia por COVID-19</center></h1>"),
+                 HTML("<h1><center>Analisis de la Pandemia por COVID-19</center></h1>"),
                  column(width = 12,
                         br(), br(),
                         wellPanel(
-                HTML("El An√°lisis de la Pandemia por COVID-19 muestra, de forma clara y directa,
-                          informaci√≥n relevante sobre la situaci√≥n COVID en la region Cusco,
-                          para esto se presentan gr√°ficos interactivos a nivel regional,
+                HTML("El Analisis de la Pandemia por COVID-19 muestra, de forma clara y directa,
+                          informaciÛn relevante sobre la situaciÛn COVID en la region Cusco,
+                          para esto se presentan graficos interactivos a nivel regional,
                           provincial y distrital.</h4>")
                         ),
                         br(),
                  #   fluidRow(
                  #   box(width=12,
                  #   valueBox(h2(strong("45,431")), "Casos totales 2021", icon = icon("virus", "fa-2x")),
-                 #   valueBox(h2(strong("234,516")), "Pruebas procesadas (moleculares, r√°pidas y antig√©nicas)", icon = icon("vial", "fa-2x")),
+                 #   valueBox(h2(strong("234,516")), "Pruebas procesadas (moleculares, rapidas y antigenos)", icon = icon("vial", "fa-2x")),
                  #   valueBox(h2(strong("1,925")), "Total Fallecidos 2021", icon = icon("skull-crossbones","fa-2x")))
                  # ),
                 
@@ -22,80 +22,80 @@ regional <- tabPanel(title = "Nivel Regional",
 
                                 
                 fluidRow(
-                  tabBox(title = h4(strong("Mapa Tem√°tico")),
+                  tabBox(title = h4(strong("Mapa Tem·tico")),
                     tabPanel("Total Positivo",
                              tabsetPanel(
-                               tabPanel("Gr√°fico",highchartOutput("map_total_positivo")),
-                               tabPanel("Resumen","Este mapa muestra el n√∫mero de
-                                        casos positivos acumulados por", strong("pruebas: molecular, r√°pida y antig√©nica"), ", esta √∫tlima desde este 2021. Para COVID-19 desde los
-                                        lugares menos afectados hacia los m√°s afectados
-                                        de la Regi√≥n Cusco. El rango comprende los
-                                        valores desde el primer d√≠a en que se report√≥
-                                        el primer caso en la Regi√≥n, hasta la fecha.
-                                        Asimismo, el rango continuo de colores muestra el color m√°s claro para las zonas menos
-                                        afectadas y el m√°s oscuro para las
-                                        m√°s afectadas.", br(), br(),
-                                        "Los colores intermedios cambian seg√∫n las zonas
-                                        se encuentren m√°s o menos afectadas.")
+                               tabPanel("Gr·fico",highchartOutput("map_total_positivo")),
+                               tabPanel("Resumen","Este mapa muestra el numero de
+                                        casos positivos acumulados por", strong("pruebas: molecular, R·pida y antigÈnica"), ", esta √∫tlima desde este 2021. Para COVID-19 desde los
+                                        lugares menos afectados hacia los mas afectados
+                                        de la RegiÛn Cusco. El rango comprende los
+                                        valores desde el primer dÌa en que se reporta
+                                        el primer caso en la RegiÛn, hasta la fecha.
+                                        Asimismo, el rango continuo de colores muestra el color mas claro para las zonas menos
+                                        afectadas y el mas oscuro para las
+                                        mas afectadas.", br(), br(),
+                                        "Los colores intermedios cambian segun las zonas
+                                        se encuentren mas o menos afectadas.")
                              )),
-                    tabPanel("Positivo R√°pida",
+                    tabPanel("Positivo R·pida",
                              tabsetPanel(
-                               tabPanel("Gr√°fico",highchartOutput("map_pr_positivo")),
-                               tabPanel("Resumen","Este mapa muestra el n√∫mero
+                               tabPanel("Gr·fico",highchartOutput("map_pr_positivo")),
+                               tabPanel("Resumen","Este mapa muestra el n˙mero
                                         de casos positivos acumulados por", strong("pruebas
-                                        r√°pidas"), "para COVID-19 desde los lugares menos
-                                        afectados hacia los m√°s afectados de la
-                                        Regi√≥n Cusco. El rango comprende los valores
-                                        desde el primer d√≠a en que se report√≥ el
-                                        primer caso en la Regi√≥n, hasta la fecha.
-                                        Asimismo, el rango continuo de colores muestra el color m√°s claro para las zonas menos
-                                        afectadas y el m√°s oscuro para las
-                                        m√°s afectadas.", br(), br(),
-                                        "Los colores intermedios cambian seg√∫n las zonas
-                                        se encuentren m√°s o menos afectadas.")
+                                        r·pidas"), "para COVID-19 desde los lugares menos
+                                        afectados hacia los mas afectados de la
+                                        RegiÛn Cusco. El rango comprende los valores
+                                        desde el primer dÌa en que se reporta el
+                                        primer caso en la RegiÛn, hasta la fecha.
+                                        Asimismo, el rango continuo de colores muestra el color mas claro para las zonas menos
+                                        afectadas y el mas oscuro para las
+                                        mas afectadas.", br(), br(),
+                                        "Los colores intermedios cambian seg˙n las zonas
+                                        se encuentren mas o menos afectadas.")
                              )),
                     
             
                     tabPanel("Positivo Molecular",
                              tabsetPanel(
-                               tabPanel("Gr√°fico", highchartOutput("map_pm_positivo")),
-                               tabPanel("Resumen", "Este mapa muestra el n√∫mero
+                               tabPanel("Gr·fico", highchartOutput("map_pm_positivo")),
+                               tabPanel("Resumen", "Este mapa muestra el n˙mero
                                         de casos positivos acumulados por", strong("pruebas
                                         moleculares"), "para COVID-19 desde los lugares
-                                        menos afectados hacia los m√°s afectados de
-                                        la Regi√≥n. El rango comprende los valores
-                                        desde el primer d√≠a en que se report√≥ el primer
-                                        caso en la Regi√≥n, hasta la fecha.
-                                        Asimismo, el rango continuo de colores muestra el color m√°s claro para las zonas menos
-                                        afectadas y el m√°s oscuro para las
-                                        m√°s afectadas.", br(), br(),
-                                        "Los colores intermedios cambian seg√∫n las zonas
-                                        se encuentren m√°s o menos afectadas.")
+                                        menos afectados hacia los mas afectados de
+                                        la RegiÛn. El rango comprende los valores
+                                        desde el primer dÌa en que se reporta el primer
+                                        caso en la RegiÛn, hasta la fecha.
+                                        Asimismo, el rango continuo de colores muestra el color mas claro para las zonas menos
+                                        afectadas y el mas oscuro para las
+                                        mas afectadas.", br(), br(),
+                                        "Los colores intermedios cambian seg˙n las zonas
+                                        se encuentren mas o menos afectadas.")
                              ))
                   ),
                   
-                  tabBox(title = h4(strong("Sem√°foro COVID")),
+                  tabBox(title = h4(strong("Sem·foro COVID")),
                          
                          
                          
                          tabPanel("Tasa de positividad molecular",
                                   tabsetPanel(
-                                    tabPanel("Gr√°fico", dygraphOutput("dygraph_region_positividad_molecular"),
-                                             h4(strong("Descripci√≥n de los ejes")),
-                                             p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas moleculares (promedio de 7 d√≠as)."), style = "color:blue")),
-                                             p(div(strong("Eje X: "), em("D√≠as."), style = "color:blue"), "El primer d√≠a de la serie corresponde al 13/03/2020, fecha en la cual se report√≥
-                                          el primer caso confirmado por COVID-19 en la regi√≥n.", "La informaci√≥n de las ultimas 2 semanas pueden sufrir variaci√≥n debido que se encuentra en proceso de actualizaci√≥n continua por las unidades notificantes")),
-                                    tabPanel("Resumen", "El sem√°foro COVID-19 de tasa de positividad molecular muestra
-                               el nivel de riesgo respecto al n√∫mero total de personas infectadas por muestras moleculares procesadas
+                                    tabPanel("Gr·fico", dygraphOutput("dygraph_region_positividad_molecular"),
+                                             h4(strong("DescripciÛn de los ejes")),
+                                             p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas moleculares (promedio de 7 dÌas)."), style = "color:blue")),
+                                             p(div(strong("Eje X: "), em("dÌas."), style = "color:blue"), "El primer dÌa de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+                                          el primer caso confirmado por COVID-19 en la RegiÛn.", "La informaciÛn de las ultimas 2 semanas pueden sufrir variaciÛn debido que se encuentra en proceso de actualizaciÛn continua por las unidades notificantes")),
+                                    tabPanel("Resumen", "El Sem·foro COVID-19 de tasa de positividad molecular muestra
+                               el nivel de riesgo respecto al n˙mero total de personas infectadas por muestras moleculares procesadas
                                por COVID-19.", br(), br(),
                                              p("El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona
-las precauciones aumentan. En esta zona el nivel y velocidad de contagio por muestras moleculares es mucho m√°s elevada.
+las precauciones aumentan. En esta zona el nivel y velocidad de contagio por muestras moleculares es mucho mas elevada.
 Se recomienda salir de casa solo en casos excepcionales y tomando muy en cuenta las medidas
 de seguridad sanitaria. ", br(), br(),
-                                               "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo a√∫n se mantiene, se pueden realizar m√°s
-actividades, siempre tomando en consideraci√≥n las medidas de seguridad sanitaria.", br(), br(),
+                                               "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo a˙n se mantiene, se pueden realizar mas
+actividades, siempre tomando en consideraciÛn las medidas de seguridad sanitaria.", br(), br(),
                                                "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
-otros colores. En todo momento se deber√≠an tomar en cuenta las medidas de seguridad sanitaria. 
+otros colores. En todo momento se deberÌan tomar en cuenta las medidas de seguridad sanitaria. 
 "))
                                   )),
 
@@ -103,43 +103,43 @@ otros colores. En todo momento se deber√≠an tomar en cuenta las medidas de segur
                                                                            
                          tabPanel("Tasa de positividad antigenica",
                                   tabsetPanel(
-                                    tabPanel("Gr√°fico", dygraphOutput("dygraph_region_positividad_antigenica"),
-                                             h4(strong("Descripci√≥n de los ejes")),
-                                             p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas antigenicas (promedio de 7 d√≠as)."), style = "color:blue")),
-                                             p(div(strong("Eje X: "), em("D√≠as."), style = "color:blue"), "El primer d√≠a de la serie corresponde al 13/03/2020, fecha en la cual se report√≥
-                                          el primer caso confirmado por COVID-19 en la regi√≥n.", "La informaci√≥n de las ultimas 2 semanas pueden sufrir variaci√≥n debido que se encuentra en proceso de actualizaci√≥n continua por las unidades notificantes")),
-                                    tabPanel("Resumen", "El sem√°foro COVID-19 de tasa de positividad antigenica muestra
-                               el nivel de riesgo respecto al n√∫mero total de personas infectadas por muestras moleculares procesadas
+                                    tabPanel("Gr·fico", dygraphOutput("dygraph_region_positividad_antigenica"),
+                                             h4(strong("DescripciÛn de los ejes")),
+                                             p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas antigenicas (promedio de 7 dÌas)."), style = "color:blue")),
+                                             p(div(strong("Eje X: "), em("dÌas."), style = "color:blue"), "El primer dÌa de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+                                          el primer caso confirmado por COVID-19 en la RegiÛn.", "La informaciÛn de las ultimas 2 semanas pueden sufrir variaciÛn debido que se encuentra en proceso de actualizaciÛn continua por las unidades notificantes")),
+                                    tabPanel("Resumen", "El Sem·foro COVID-19 de tasa de positividad antigenica muestra
+                               el nivel de riesgo respecto al n˙mero total de personas infectadas por muestras moleculares procesadas
                                por COVID-19.", br(), br(),
                                              p("El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona
-las precauciones aumentan. En esta zona el nivel y velocidad de contagio por muestras moleculares es mucho m√°s elevada.
+las precauciones aumentan. En esta zona el nivel y velocidad de contagio por muestras moleculares es mucho mas elevada.
 Se recomienda salir de casa solo en casos excepcionales y tomando muy en cuenta las medidas
 de seguridad sanitaria. ", br(), br(),
-                                               "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo a√∫n se mantiene, se pueden realizar m√°s
-actividades, siempre tomando en consideraci√≥n las medidas de seguridad sanitaria.", br(), br(),
+                                               "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo a˙n se mantiene, se pueden realizar mas
+actividades, siempre tomando en consideraciÛn las medidas de seguridad sanitaria.", br(), br(),
                                                "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
-otros colores. En todo momento se deber√≠an tomar en cuenta las medidas de seguridad sanitaria. 
+otros colores. En todo momento se deberÌan tomar en cuenta las medidas de seguridad sanitaria. 
 "))
                                   )),
 
 
-                         tabPanel("Sintom√°ticos",
+                         tabPanel("sintom·ticos",
                                   tabsetPanel(
-                                    tabPanel("Gr√°fico",dygraphOutput("dygraph_region_sintomaticos"),
-                                             h4(strong("Descripci√≥n de los ejes")),
-                                             p(div(strong("Eje Y: "), em("Sintom√°ticos por COVID-19 en la Regi√≥n Cusco."), style = "color:blue")),
-                                             p(div(strong("Eje X: "), em("D√≠as."), style = "color:blue"), "La informaci√≥n de las ultimas 2 semanas pueden sufrir variaci√≥n debido que se encuentra en proceso de actualizaci√≥n continua por las unidades notificantes")),
-                                    tabPanel("Resumen", "El sem√°foro COVID-19 de sintom√°ticos muestra
-                               el nivel de riesgo respecto al n√∫mero total de contagiados
+                                    tabPanel("Gr·fico",dygraphOutput("dygraph_region_sintomaticos"),
+                                             h4(strong("DescripciÛn de los ejes")),
+                                             p(div(strong("Eje Y: "), em("sintom·ticos por COVID-19 en la RegiÛn Cusco."), style = "color:blue")),
+                                             p(div(strong("Eje X: "), em("dÌas."), style = "color:blue"), "La informaciÛn de las ultimas 2 semanas pueden sufrir variaciÛn debido que se encuentra en proceso de actualizaciÛn continua por las unidades notificantes")),
+                                    tabPanel("Resumen", "El Sem·foro COVID-19 de sintom·ticos muestra
+                               el nivel de riesgo respecto al n˙mero total de contagiados
                                por COVID-19.", br(), br(),
                                              p("El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona
-las precauciones aumentan. En esta zona el nivel y velocidad de contagio es mucho m√°s elevada.
+las precauciones aumentan. En esta zona el nivel y velocidad de contagio es mucho mas elevada.
 Se recomienda salir de casa solo en casos excepcionales y tomando muy en cuenta las medidas
 de seguridad sanitaria. ", br(), br(),
-                                               "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo a√∫n se mantiene, se pueden realizar m√°s
-actividades, siempre tomando en consideraci√≥n las medidas de seguridad sanitaria.", br(), br(),
+                                               "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo a˙n se mantiene, se pueden realizar mas
+actividades, siempre tomando en consideraciÛn las medidas de seguridad sanitaria.", br(), br(),
                                                "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
-otros colores. En todo momento se deber√≠an tomar en cuenta las medidas de seguridad sanitaria. 
+otros colores. En todo momento se deberÌan tomar en cuenta las medidas de seguridad sanitaria. 
 "))
                                   )),
                          
@@ -148,22 +148,22 @@ otros colores. En todo momento se deber√≠an tomar en cuenta las medidas de segur
                       
                     tabPanel("Casos",
                              tabsetPanel(
-                               tabPanel("Gr√°fico",dygraphOutput("dygraph_region_casos"),
-                                        h4(strong("Descripci√≥n de los ejes")),
-                                        p(div(strong("Eje Y: "), em("Casos positivos acumulados por COVID-19 en la Regi√≥n Cusco."), style = "color:blue")),
-                                        p(div(strong("Eje X: "), em("D√≠as."), style = "color:blue"), "El primer d√≠a de la serie corresponde al 13/03/2020, fecha en la cual se report√≥
-                                          el primer caso confirmado por COVID-19 en la regi√≥n.", "La informaci√≥n de las ultimas 2 semanas pueden sufrir variaci√≥n debido que se encuentra en proceso de actualizaci√≥n continua por las unidades notificantes")),
-                               tabPanel("Resumen", "El sem√°foro COVID-19 de casos muestra
-                               el nivel de riesgo respecto al n√∫mero total de contagiados
+                               tabPanel("Gr·fico",dygraphOutput("dygraph_region_casos"),
+                                        h4(strong("DescripciÛn de los ejes")),
+                                        p(div(strong("Eje Y: "), em("Casos positivos acumulados por COVID-19 en la RegiÛn Cusco."), style = "color:blue")),
+                                        p(div(strong("Eje X: "), em("dÌas."), style = "color:blue"), "El primer dÌa de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+                                          el primer caso confirmado por COVID-19 en la RegiÛn.", "La informaciÛn de las ultimas 2 semanas pueden sufrir variaciÛn debido que se encuentra en proceso de actualizaciÛn continua por las unidades notificantes")),
+                               tabPanel("Resumen", "El Sem·foro COVID-19 de casos muestra
+                               el nivel de riesgo respecto al n˙mero total de contagiados
                                por COVID-19.", br(), br(),
                                         p("El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona
-las precauciones aumentan. En esta zona el nivel y velocidad de contagio es mucho m√°s elevada.
+las precauciones aumentan. En esta zona el nivel y velocidad de contagio es mucho mas elevada.
 Se recomienda salir de casa solo en casos excepcionales y tomando muy en cuenta las medidas
 de seguridad sanitaria. ", br(), br(),
-"El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo a√∫n se mantiene, se pueden realizar m√°s
-actividades, siempre tomando en consideraci√≥n las medidas de seguridad sanitaria.", br(), br(),
+"El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo a˙n se mantiene, se pueden realizar mas
+actividades, siempre tomando en consideraciÛn las medidas de seguridad sanitaria.", br(), br(),
 "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
-otros colores. En todo momento se deber√≠an tomar en cuenta las medidas de seguridad sanitaria. 
+otros colores. En todo momento se deberÌan tomar en cuenta las medidas de seguridad sanitaria. 
 "))
                              )),
 
@@ -174,22 +174,22 @@ otros colores. En todo momento se deber√≠an tomar en cuenta las medidas de segur
 
 tabPanel("Casos antigenica",
          tabsetPanel(
-           tabPanel("Gr√°fico",dygraphOutput("dygraph_region_casos_antigenica"),
-                    h4(strong("Descripci√≥n de los ejes")),
-                    p(div(strong("Eje Y: "), em("Casos positivos por prueba antigenica por COVID-19 en la Regi√≥n Cusco."), style = "color:blue")),
-                    p(div(strong("Eje X: "), em("D√≠as."), style = "color:blue"), "El primer d√≠a de la serie corresponde al 13/03/2020, fecha en la cual se report√≥
-                                          el primer caso confirmado por COVID-19 en la regi√≥n.", "La informaci√≥n de las ultimas 2 semanas pueden sufrir variaci√≥n debido que se encuentra en proceso de actualizaci√≥n continua por las unidades notificantes")),
-           tabPanel("Resumen", "El sem√°foro COVID-19 de casos muestra
-                               el nivel de riesgo respecto al n√∫mero total de contagiados
+           tabPanel("Gr·fico",dygraphOutput("dygraph_region_casos_antigenica"),
+                    h4(strong("DescripciÛn de los ejes")),
+                    p(div(strong("Eje Y: "), em("Casos positivos por prueba antigenica por COVID-19 en la RegiÛn Cusco."), style = "color:blue")),
+                    p(div(strong("Eje X: "), em("dÌas."), style = "color:blue"), "El primer dÌa de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+                                          el primer caso confirmado por COVID-19 en la RegiÛn.", "La informaciÛn de las ultimas 2 semanas pueden sufrir variaciÛn debido que se encuentra en proceso de actualizaciÛn continua por las unidades notificantes")),
+           tabPanel("Resumen", "El Sem·foro COVID-19 de casos muestra
+                               el nivel de riesgo respecto al n˙mero total de contagiados
                                por COVID-19.", br(), br(),
                     p("El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona
-las precauciones aumentan. En esta zona el nivel y velocidad de contagio es mucho m√°s elevada.
+las precauciones aumentan. En esta zona el nivel y velocidad de contagio es mucho mas elevada.
 Se recomienda salir de casa solo en casos excepcionales y tomando muy en cuenta las medidas
 de seguridad sanitaria. ", br(), br(),
-                      "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo a√∫n se mantiene, se pueden realizar m√°s
-actividades, siempre tomando en consideraci√≥n las medidas de seguridad sanitaria.", br(), br(),
+                      "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo a˙n se mantiene, se pueden realizar mas
+actividades, siempre tomando en consideraciÛn las medidas de seguridad sanitaria.", br(), br(),
                       "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
-otros colores. En todo momento se deber√≠an tomar en cuenta las medidas de seguridad sanitaria. 
+otros colores. En todo momento se deberÌan tomar en cuenta las medidas de seguridad sanitaria. 
 "))
          )),
 
@@ -198,21 +198,21 @@ otros colores. En todo momento se deber√≠an tomar en cuenta las medidas de segur
 
                     tabPanel("Defunciones",
                              tabsetPanel(
-                               tabPanel("Gr√°fico",dygraphOutput("dygraph_region_defunciones"),
-                                        h4(strong("Descripci√≥n de los ejes")),
-                                        p(div(strong("Eje Y: "), em("Defunciones acumuladas por COVID-19 en la Regi√≥n Cusco."), style = "color:blue")),
-                                        p(div(strong("Eje X: "), em("D√≠as."), style = "color:blue"), "El primer d√≠a de la serie corresponde al 13/03/2020, fecha en la cual se report√≥
-                                          el primer caso confirmado por COVID-19 en la regi√≥n.", "La informaci√≥n de las ultimas 2 semanas pueden sufrir variaci√≥n debido que se encuentra en proceso de actualizaci√≥n continua por las unidades notificantes")),
-                               tabPanel("Resumen","El sem√°foro COVID-19 de defunciones muestra
-                               el nivel de riesgo respecto al n√∫mero total de fallecidos por COVID-19.", br(), br(),
+                               tabPanel("Gr·fico",dygraphOutput("dygraph_region_defunciones"),
+                                        h4(strong("DescripciÛn de los ejes")),
+                                        p(div(strong("Eje Y: "), em("Defunciones acumuladas por COVID-19 en la RegiÛn Cusco."), style = "color:blue")),
+                                        p(div(strong("Eje X: "), em("dÌas."), style = "color:blue"), "El primer dÌa de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+                                          el primer caso confirmado por COVID-19 en la RegiÛn.", "La informaciÛn de las ultimas 2 semanas pueden sufrir variaciÛn debido que se encuentra en proceso de actualizaciÛn continua por las unidades notificantes")),
+                               tabPanel("Resumen","El Sem·foro COVID-19 de defunciones muestra
+                               el nivel de riesgo respecto al n˙mero total de fallecidos por COVID-19.", br(), br(),
 "El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona las precauciones aumentan. Hay una
-alerta m√°xima por las defunciones que se presentan d√≠a a d√≠a. En todo tiempo deber√≠amos no exponernos
+alerta m·xima por las defunciones que se presentan dÌa a dÌa. En todo tiempo deberÌamos no exponernos
 al COVID-19, necesitamos cuidarnos y cuidar a los nuestros.", br(), br(),
-"El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo a√∫n se mantiene, la alerta no es m√°xima debido a
-que el n√∫mero de defunciones por d√≠a ha bajado respecto al color rojo. En todo tiempo deber√≠amos no
+"El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo a˙n se mantiene, la alerta no es m·xima debido a
+que el n˙mero de defunciones por dÌa ha bajado respecto al color rojo. En todo tiempo deberÌamos no
 exponernos al COVID-19, necesitamos cuidarnos y cuidar a los nuestros.", br(), br(),
-"El color", strong("verde"), "representa que el nivel de riesgo es bajo, la alerta por n√∫mero de defunciones est√°
-presente, pero no es tan elevada respecto a los otros colores. En todo tiempo deber√≠amos no
+"El color", strong("verde"), "representa que el nivel de riesgo es bajo, la alerta por n˙mero de defunciones est√°
+presente, pero no es tan elevada respecto a los otros colores. En todo tiempo deberÌamos no
 exponernos al COVID-19, necesitamos cuidarnos y cuidar a los nuestros.
 ")
                              )),
@@ -220,27 +220,27 @@ exponernos al COVID-19, necesitamos cuidarnos y cuidar a los nuestros.
 
                     tabPanel("Camas",
                              tabsetPanel(
-                               tabPanel("Gr√°fico", dygraphOutput("dygraph_region_camas"),
-                                        h4(strong("Descripci√≥n de los ejes y leyenda")),
-                                        p(div(strong("Eje Y: "), em("Total de camas disponibles para COVID-19 (UCI, NO UCI, NIVEL II), en la Regi√≥n Cusco."), style = "color:blue")),
-                                        p(div(strong("Eje X: "), em("D√≠as."), style = "color:blue")),
+                               tabPanel("Gr·fico", dygraphOutput("dygraph_region_camas"),
+                                        h4(strong("DescripciÛn de los ejes y leyenda")),
+                                        p(div(strong("Eje Y: "), em("Total de camas disponibles para COVID-19 (UCI, NO UCI, NIVEL II), en la RegiÛn Cusco."), style = "color:blue")),
+                                        p(div(strong("Eje X: "), em("dÌas."), style = "color:blue")),
                                         p(div(strong("UCI: "), em("Unidad de Cuidado Intensivos."), style = "color:blue")),
                                         p(div(strong("UCIN: "), em("Unidad de Cuidados Intermedios."), style = "color:blue"))),
-                               tabPanel("Resumen", "El sem√°foro COVID-19 de camas muestra
-                               el nivel de riesgo respecto al n√∫mero total de camas UCI,
+                               tabPanel("Resumen", "El Sem·foro COVID-19 de camas muestra
+                               el nivel de riesgo respecto al n˙mero total de camas UCI,
                                NO UCI, camas de Nivel II y UCIN por COVID-19.", br(), br(),
 "El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona las camas se ocupan
-por sobre el 60%. Hay una alerta m√°xima por el uso de las mismas en el d√≠a a d√≠a.
-En todo tiempo deber√≠amos no exponernos al COVID-19, necesitamos cuidarnos y
+por sobre el 60%. Hay una alerta m·xima por el uso de las mismas en el dÌa a dÌa.
+En todo tiempo deberÌamos no exponernos al COVID-19, necesitamos cuidarnos y
 cuidar a los nuestros.", br(), br(),
 "El color", strong("amarillo"), "representa un nivel de riesgo moderado, en esta zona las camas se ocupan
-entre el 30 y 60%. Aunque el riesgo a√∫n se mantiene, la alerta no es
-m√°xima debido a que el n√∫mero de camas por d√≠a ha bajado respecto al color rojo.
-En todo tiempo deber√≠amos no exponernos al COVID-19,
+entre el 30 y 60%. Aunque el riesgo a˙n se mantiene, la alerta no es
+m·xima debido a que el n˙mero de camas por dÌa ha bajado respecto al color rojo.
+En todo tiempo deberÌamos no exponernos al COVID-19,
 necesitamos cuidarnos y cuidar a los nuestros.", br(), br(),
-"El color", strong("verde"), "representa un nivel de riesgo bajo, la alerta por n√∫mero de
+"El color", strong("verde"), "representa un nivel de riesgo bajo, la alerta por n˙mero de
 camas usadas para COVID-19 est√° presente, pero no es tan elevada respecto a los
-otros colores, a saber, el uso de estas se encuentra por debajo del 30%. En todo tiempo deber√≠amos no
+otros colores, a saber, el uso de estas se encuentra por debajo del 30%. En todo tiempo deberÌamos no
 exponernos al COVID-19, necesitamos cuidarnos y cuidar a los nuestros.
 ")
                              ))
@@ -250,67 +250,67 @@ exponernos al COVID-19, necesitamos cuidarnos y cuidar a los nuestros.
                 # Fila 2
 
                 fluidRow(
-                  tabBox(title = h4(strong("Casos acumulados de Covid-19: Regi√≥n Cusco (I)")),
+                  tabBox(title = h4(strong("Casos acumulados de Covid-19: RegiÛn Cusco (I)")),
                          tabPanel("Lineal",
                                   tabsetPanel(
-                                    tabPanel("Gr√°fico",dygraphOutput("plot3"),
-                                             h4(strong("Descripci√≥n de los ejes")),
-                                             p(div(strong("Eje Y: "), em("N√∫mero total de casos positivos, recuperados, sintom√°ticos, activos y defunciones por COVID-19, en la regi√≥n."), style = "color:blue")),
-                                             p(div(strong("Eje X: "), em("D√≠as."), style = "color:blue"), "El primer d√≠a de la serie corresponde al 13/03/2020, fecha en la cual se report√≥
-                                          el primer caso confirmado por COVID-19 en la regi√≥n.", "La informaci√≥n de las ultimas 2 semanas pueden sufrir variaci√≥n debido que se encuentra en proceso de actualizaci√≥n continua por las unidades notificantes")),
+                                    tabPanel("Gr·fico",dygraphOutput("plot3"),
+                                             h4(strong("DescripciÛn de los ejes")),
+                                             p(div(strong("Eje Y: "), em("n˙mero total de casos positivos, recuperados, sintom·ticos, activos y defunciones por COVID-19, en la RegiÛn."), style = "color:blue")),
+                                             p(div(strong("Eje X: "), em("dÌas."), style = "color:blue"), "El primer dÌa de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+                                          el primer caso confirmado por COVID-19 en la RegiÛn.", "La informaciÛn de las ultimas 2 semanas pueden sufrir variaciÛn debido que se encuentra en proceso de actualizaciÛn continua por las unidades notificantes")),
                                              
-                                    tabPanel("Resumen","Las curvas de esta gr√°fica muestran
-                                    la evoluci√≥n diaria del acumulado de
-                                    casos positivos, recuperados, defunciones, sintom√°ticos
-                                    y activos, para la Regi√≥n Cusco.", br(), br(),
-"Usted puede elegir apreciar el panorama m√°s amplio (acumulado hist√≥rico) o mover el
-deslizador para apreciar la evoluci√≥n de las curvas acumuladas en los d√≠as m√°s pr√≥ximos a hoy.
+                                    tabPanel("Resumen","Las curvas de esta gr·fica muestran
+                                    la evoluciÛn diaria del acumulado de
+                                    casos positivos, recuperados, defunciones, sintom·ticos
+                                    y activos, para la RegiÛn Cusco.", br(), br(),
+"Usted puede elegir apreciar el panorama mas amplio (acumulado histÛrico) o mover el
+deslizador para apreciar la evoluciÛn de las curvas acumuladas en los dÌas mas prÛximos a hoy.
 ")
                                   ))
                   ),
 
-                  tabBox(title = h4(strong("Casos acumulados de Covid-19: Regi√≥n Cusco (II)")),
+                  tabBox(title = h4(strong("Casos acumulados de Covid-19: RegiÛn Cusco (II)")),
                          tabPanel("Lineal",
                                   tabsetPanel(
-                                    tabPanel("Gr√°fico",dygraphOutput("plot4"),
-                                             h4(strong("Descripci√≥n de los ejes")),
-                                             p(div(strong("Eje Y: "), em("N√∫mero total de casos positivos a COVID-19 y n√∫mero total de habitantes con inicio de s√≠ntomas en la regi√≥n."), style = "color:blue")),
-                                             p(div(strong("Eje X: "), em("D√≠as."), style = "color:blue"), "El primer d√≠a de la serie corresponde al 13/03/2020, fecha en la cual se report√≥
-                                          el primer caso confirmado por COVID-19 en la regi√≥n.", "La informaci√≥n de las ultimas 2 semanas pueden sufrir variaci√≥n debido que se encuentra en proceso de actualizaci√≥n continua por las unidades notificantes")),
+                                    tabPanel("Gr·fico",dygraphOutput("plot4"),
+                                             h4(strong("DescripciÛn de los ejes")),
+                                             p(div(strong("Eje Y: "), em("n˙mero total de casos positivos a COVID-19 y n˙mero total de habitantes con inicio de sÌntomas en la RegiÛn."), style = "color:blue")),
+                                             p(div(strong("Eje X: "), em("dÌas."), style = "color:blue"), "El primer dÌa de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+                                          el primer caso confirmado por COVID-19 en la RegiÛn.", "La informaciÛn de las ultimas 2 semanas pueden sufrir variaciÛn debido que se encuentra en proceso de actualizaciÛn continua por las unidades notificantes")),
                                     tabPanel("Resumen","Las curvas de esta
-                                    gr√°fica muestran la evoluci√≥n diaria
-                                    del n√∫mero acumulado, hasta la fecha,
-                                    de personas en inicio de s√≠ntomas para
-                                    COVID-19 y el n√∫mero total de casos
-                                    positivos, para la Regi√≥n Cusco..", br(), br(),
-                                    "Usted puede elegir apreciar el panorama m√°s amplio (acumulado hist√≥rico)
-o mover el deslizador para apreciar la evoluci√≥n de las curvas acumuladas
-en los d√≠as m√°s pr√≥ximos a hoy.")
+                                    gr·fica muestran la evoluciÛn diaria
+                                    del n˙mero acumulado, hasta la fecha,
+                                    de personas en inicio de sÌntomas para
+                                    COVID-19 y el n˙mero total de casos
+                                    positivos, para la RegiÛn Cusco..", br(), br(),
+                                    "Usted puede elegir apreciar el panorama mas amplio (acumulado histÛrico)
+o mover el deslizador para apreciar la evoluciÛn de las curvas acumuladas
+en los dÌas mas prÛximos a hoy.")
                                   )),
                          tabPanel("Log",
                                   tabsetPanel(
-                                    tabPanel("Gr√°fico", dygraphOutput("plot5"),
-                                             h4(strong("Descripci√≥n de los ejes")),
-                                             p(div(strong("Eje Y: "), em("Log10 del n√∫mero total de casos positivos a COVID-19 y log10 del n√∫mero total de habitantes con inicio de s√≠ntomas en la regi√≥n."), style = "color:blue")),
-                                             p(div(strong("Eje X: "), em("D√≠as."), style = "color:blue"), "El primer d√≠a de la serie corresponde al 13/03/2020, fecha en la cual se report√≥
-                                          el primer caso confirmado por COVID-19 en la regi√≥n.", "La informaci√≥n de las ultimas 2 semanas pueden sufrir variaci√≥n debido que se encuentra en proceso de actualizaci√≥n continua por las unidades notificantes")),
+                                    tabPanel("Gr·fico", dygraphOutput("plot5"),
+                                             h4(strong("DescripciÛn de los ejes")),
+                                             p(div(strong("Eje Y: "), em("Log10 del n˙mero total de casos positivos a COVID-19 y log10 del n˙mero total de habitantes con inicio de sÌntomas en la RegiÛn."), style = "color:blue")),
+                                             p(div(strong("Eje X: "), em("dÌas."), style = "color:blue"), "El primer dÌa de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+                                          el primer caso confirmado por COVID-19 en la RegiÛn.", "La informaciÛn de las ultimas 2 semanas pueden sufrir variaciÛn debido que se encuentra en proceso de actualizaciÛn continua por las unidades notificantes")),
                                     tabPanel("Resumen", "Las curvas de esta
-                                    gr√°fica muestran la evoluci√≥n diaria
-                                    del n√∫mero acumulado, hasta la fecha,
-                                    de personas en inicio de s√≠ntomas para
-                                    COVID-19 y el n√∫mero total de casos
-                                    positivos. En esa l√≠nea, se puede
+                                    gr·fica muestran la evoluciÛn diaria
+                                    del n˙mero acumulado, hasta la fecha,
+                                    de personas en inicio de sÌntomas para
+                                    COVID-19 y el n˙mero total de casos
+                                    positivos. En esa lÌnea, se puede
                                     apreciar un versus entre las
                                     evoluciones de ambas curvas,
                                     se puede ver como se comporta
                                     la curva de aquellas personas
-                                    que iniciaron s√≠ntomas respecto
+                                    que iniciaron sÌntomas respecto
                                     a aquellas que ya fueron
                                     confirmadas como contagiadas con el virus.", br(), br(),
-"Usted puede elegir apreciar el panorama m√°s amplio (acumulado hist√≥rico)
-o mover el deslizador para apreciar la evoluci√≥n de las curvas acumuladas
-en los d√≠as m√°s pr√≥ximos a hoy.", br(), br(),
-p(strong("Nota: "), "Se aplic√≥", em("log10"), "a las curvas para suavizar la serie en el tiempo. 
+"Usted puede elegir apreciar el panorama mas amplio (acumulado histÛrico)
+o mover el deslizador para apreciar la evoluciÛn de las curvas acumuladas
+en los dÌas mas prÛximos a hoy.", br(), br(),
+p(strong("Nota: "), "Se aplica", em("log10"), "a las curvas para suavizar la serie en el tiempo. 
 "))
                                   ))
                   )
@@ -329,18 +329,18 @@ fluidRow(
   tabBox(title = h4(strong("Vacunacion")),
          tabPanel("Ritmo",
                   tabsetPanel(
-                    tabPanel("Gr√°fico",dygraphOutput("plot6"),
-                             h4(strong("Descripci√≥n de los ejes")),
-                             p(div(strong("Eje Y: "), em("N√∫mero total de casos positivos, recuperados, sintom√°ticos, activos y defunciones por COVID-19, en la regi√≥n."), style = "color:blue")),
-                             p(div(strong("Eje X: "), em("D√≠as."), style = "color:blue"), "El primer d√≠a de la serie corresponde al 13/03/2020, fecha en la cual se report√≥
-                                          el primer caso confirmado por COVID-19 en la regi√≥n.", "La informaci√≥n de las ultimas 2 semanas pueden sufrir variaci√≥n debido que se encuentra en proceso de actualizaci√≥n continua por las unidades notificantes")),
+                    tabPanel("Gr·fico",dygraphOutput("plot6"),
+                             h4(strong("DescripciÛn de los ejes")),
+                             p(div(strong("Eje Y: "), em("n˙mero total de casos positivos, recuperados, sintom·ticos, activos y defunciones por COVID-19, en la RegiÛn."), style = "color:blue")),
+                             p(div(strong("Eje X: "), em("dÌas."), style = "color:blue"), "El primer dÌa de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+                                          el primer caso confirmado por COVID-19 en la RegiÛn.", "La informaciÛn de las ultimas 2 semanas pueden sufrir variaciÛn debido que se encuentra en proceso de actualizaciÛn continua por las unidades notificantes")),
                     
-                    tabPanel("Resumen","Las curvas de esta gr√°fica muestran
-                                    la evoluci√≥n diaria del acumulado de
-                                    casos positivos, recuperados, defunciones, sintom√°ticos
-                                    y activos, para la Regi√≥n Cusco.", br(), br(),
-                             "Usted puede elegir apreciar el panorama m√°s amplio (acumulado hist√≥rico) o mover el
-deslizador para apreciar la evoluci√≥n de las curvas acumuladas en los d√≠as m√°s pr√≥ximos a hoy.
+                    tabPanel("Resumen","Las curvas de esta gr·fica muestran
+                                    la evoluciÛn diaria del acumulado de
+                                    casos positivos, recuperados, defunciones, sintom·ticos
+                                    y activos, para la RegiÛn Cusco.", br(), br(),
+                             "Usted puede elegir apreciar el panorama mas amplio (acumulado histÛrico) o mover el
+deslizador para apreciar la evoluciÛn de las curvas acumuladas en los dÌas mas prÛximos a hoy.
 ")
                   ))
   )

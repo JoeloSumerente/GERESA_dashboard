@@ -12,8 +12,9 @@
 
 *** 1. Pasos previos
 
- use "$source2_siscovid\input\data_dashboard.dta", clear
+use "$source2_siscovid\input\data_dashboard.dta", clear
 *use "D:\7. Work\covid_cusco\datos\output\data_dashboard.dta", clear
+*use "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\input\data_dashboard.dta", clear
 
 drop 	ubigeo
 
@@ -22,6 +23,7 @@ replace distrito = ustrregexra( ustrnormalize( distrito, "nfd" ) , "\p{Mark}", "
 
 ** Combinar distritos y ubigeo
 merge 	m:1 distrito using "$source2_siscovid\input\ubigeo.dta"
+*merge 	m:1 distrito using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\ubigeo.dta"
 
 ** Generar diagnosticados en otras regionaes
 gen 	dis_temp = distrito if ubigeo !=""

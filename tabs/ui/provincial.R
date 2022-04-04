@@ -11,25 +11,25 @@ provincial <- tabPanel(title = "Nivel Provincial",
                      
                      fluidRow(
                        tabBox(width = 12,
-                         title = h4(strong("Semáforo COVID")),
+                         title = h4(strong("Semaforo COVID")),
                          id = "tab_semaforo_prov",
                          tabPanel("Tasa de positividad molecular",
                                   tabsetPanel(
-                                    tabPanel("Gráfico", dygraphOutput("dygraph_prov_positividad_molecular"),
-                                             h4(strong("Descripción de los ejes")),
-                                             p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas moleculares (promedio de 7 Días)."), style = "color:blue")),
-                                             p(div(strong("Eje X: "), em("Días."), style = "color:blue"), "El primer día de la serie corresponde al 13/03/2020, fecha en la cual se reporta
-                                          el primer caso confirmado por COVID-19 en la región.")
+                                    tabPanel("Grafico", dygraphOutput("dygraph_prov_positividad_molecular"),
+                                             h4(strong("Descripcion de los ejes")),
+                                             p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas moleculares (promedio de 7 Dias)."), style = "color:blue")),
+                                             p(div(strong("Eje X: "), em("Dias."), style = "color:blue"), "El primer dia de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+                                          el primer caso confirmado por COVID-19 en la region.")
                                           ),
-                                    tabPanel("Resumen", "El Semáforo COVID-19 de tasa de positividad molecular muestra
-                               el nivel de riesgo respecto al número total de personas infectadas por muestras moleculares procesadas
+                                    tabPanel("Resumen", "El Semaforo COVID-19 de tasa de positividad molecular muestra
+                               el nivel de riesgo respecto al numero total de personas infectadas por muestras moleculares procesadas
                                por COVID-19.", br(), br(),
                                              p("El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona
-las precauciones aumentan. En esta zona el nivel y velocidad de contagio por muestras moleculares es mucho más elevada.
+las precauciones aumentan. En esta zona el nivel y velocidad de contagio por muestras moleculares es mucho mas elevada.
 Se recomienda salir de casa solo en casos excepcionales y tomando muy en cuenta las medidas
 de seguridad sanitaria. ", br(), br(),
-                                               "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar más
-actividades, siempre tomando en consideración las medidas de seguridad sanitaria.", br(), br(),
+                                               "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar mas
+actividades, siempre tomando en consideracion las medidas de seguridad sanitaria.", br(), br(),
                                                "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
 otros colores. En todo momento se deberían tomar en cuenta las medidas de seguridad sanitaria. 
 "))
@@ -38,20 +38,20 @@ otros colores. En todo momento se deberían tomar en cuenta las medidas de seguri
                          
 #                          tabPanel("Tasa de positividad antigenica",
 #                                   tabsetPanel(
-#                                     tabPanel("Gráfico", dygraphOutput("dygraph_prov_positividad_antigenica"),
-#                                              h4(strong("Descripción de los ejes")),
-#                                              p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas antigenicas (promedio de 7 Días)."), style = "color:blue")),
-#                                              p(div(strong("Eje X: "), em("Días."), style = "color:blue"), "El primer día de la serie corresponde al 13/03/2020, fecha en la cual se reporta
-#                                           el primer caso confirmado por COVID-19 en la región.")),
-#                                     tabPanel("Resumen", "El Semáforo COVID-19 de tasa de positividad antigenica muestra
-#                                el nivel de riesgo respecto al número total de personas infectadas por muestras moleculares procesadas
+#                                     tabPanel("Grafico", dygraphOutput("dygraph_prov_positividad_antigenica"),
+#                                              h4(strong("Descripcion de los ejes")),
+#                                              p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas antigenicas (promedio de 7 Dias)."), style = "color:blue")),
+#                                              p(div(strong("Eje X: "), em("Dias."), style = "color:blue"), "El primer dia de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+#                                           el primer caso confirmado por COVID-19 en la region.")),
+#                                     tabPanel("Resumen", "El Semaforo COVID-19 de tasa de positividad antigenica muestra
+#                                el nivel de riesgo respecto al numero total de personas infectadas por muestras moleculares procesadas
 #                                por COVID-19.", br(), br(),
 #                                              p("El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona
-# las precauciones aumentan. En esta zona el nivel y velocidad de contagio por muestras moleculares es mucho más elevada.
+# las precauciones aumentan. En esta zona el nivel y velocidad de contagio por muestras moleculares es mucho mas elevada.
 # Se recomienda salir de casa solo en casos excepcionales y tomando muy en cuenta las medidas
 # de seguridad sanitaria. ", br(), br(),
-#                                                "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar más
-# actividades, siempre tomando en consideración las medidas de seguridad sanitaria.", br(), br(),
+#                                                "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar mas
+# actividades, siempre tomando en consideracion las medidas de seguridad sanitaria.", br(), br(),
 #                                                "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
 # otros colores. En todo momento se deberían tomar en cuenta las medidas de seguridad sanitaria. 
 # "))
@@ -60,42 +60,42 @@ otros colores. En todo momento se deberían tomar en cuenta las medidas de seguri
                          
                          tabPanel("Casos",
                                   tabsetPanel(
-                                    tabPanel("Gráfico", dygraphOutput("dygraph_prov_new_cases"),
-                                             h4(strong("Descripción de los ejes")),
-                                             p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas moleculares (promedio de 7 Días)."), style = "color:blue")),
-                                             p(div(strong("Eje X: "), em("Días."), style = "color:blue"), "El primer día de la serie corresponde al 13/03/2020, fecha en la cual se reporta
-                                          el primer caso confirmado por COVID-19 en la región.")
+                                    tabPanel("Grafico", dygraphOutput("dygraph_prov_new_cases"),
+                                             h4(strong("Descripcion de los ejes")),
+                                             p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas moleculares (promedio de 7 Dias)."), style = "color:blue")),
+                                             p(div(strong("Eje X: "), em("Dias."), style = "color:blue"), "El primer dia de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+                                          el primer caso confirmado por COVID-19 en la region.")
                                     ),
-                                    tabPanel("Resumen", "El Semáforo COVID-19 de casos muestra
-                               el nivel de riesgo respecto al número total de contagiados
+                                    tabPanel("Resumen", "El Semaforo COVID-19 de casos muestra
+                               el nivel de riesgo respecto al numero total de contagiados
                                por COVID-19.", br(), br(),
                                              p("El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona
-las precauciones aumentan. En esta zona el nivel y velocidad de contagio es mucho más elevada.
+las precauciones aumentan. En esta zona el nivel y velocidad de contagio es mucho mas elevada.
 Se recomienda salir de casa solo en casos excepcionales y tomando muy en cuenta las medidas
 de seguridad sanitaria. ", br(), br(),
-                                               "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar más
-actividades, siempre tomando en consideración las medidas de seguridad sanitaria.", br(), br(),
+                                               "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar mas
+actividades, siempre tomando en consideracion las medidas de seguridad sanitaria.", br(), br(),
                                                "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
 otros colores. En todo momento se deberían tomar en cuenta las medidas de seguridad sanitaria. 
 "))
                                     )),
                          tabPanel("Defunciones",
                                   tabsetPanel(
-                                    tabPanel("Gráfico", dygraphOutput("dygraph_prov_new_deaths"),
-                                             h4(strong("Descripción de los ejes")),
-                                             p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas moleculares (promedio de 7 Días)."), style = "color:blue")),
-                                             p(div(strong("Eje X: "), em("Días."), style = "color:blue"), "El primer día de la serie corresponde al 13/03/2020, fecha en la cual se reporta
-                                          el primer caso confirmado por COVID-19 en la región.")
+                                    tabPanel("Grafico", dygraphOutput("dygraph_prov_new_deaths"),
+                                             h4(strong("Descripcion de los ejes")),
+                                             p(div(strong("Eje Y: "), em("Tasa de positividad de pruebas moleculares (promedio de 7 Dias)."), style = "color:blue")),
+                                             p(div(strong("Eje X: "), em("Dias."), style = "color:blue"), "El primer dia de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+                                          el primer caso confirmado por COVID-19 en la region.")
                                     ),
-                                    tabPanel("Resumen", "El Semáforo COVID-19 de casos muestra
-                               el nivel de riesgo respecto al número total de contagiados
+                                    tabPanel("Resumen", "El Semaforo COVID-19 de casos muestra
+                               el nivel de riesgo respecto al numero total de contagiados
                                por COVID-19.", br(), br(),
                                              p("El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona
-las precauciones aumentan. En esta zona el nivel y velocidad de contagio es mucho más elevada.
+las precauciones aumentan. En esta zona el nivel y velocidad de contagio es mucho mas elevada.
 Se recomienda salir de casa solo en casos excepcionales y tomando muy en cuenta las medidas
 de seguridad sanitaria. ", br(), br(),
-                                               "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar más
-actividades, siempre tomando en consideración las medidas de seguridad sanitaria.", br(), br(),
+                                               "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar mas
+actividades, siempre tomando en consideracion las medidas de seguridad sanitaria.", br(), br(),
                                                "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
 otros colores. En todo momento se deberían tomar en cuenta las medidas de seguridad sanitaria. 
 "))

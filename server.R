@@ -19,7 +19,7 @@ shinyServer(function(input, output, session){
   data_dpto_r <- reactive({
     data_dpto <- read_data_dpto()
   })
-  
+    
   data_dpto_r2 <- reactive({
     data_dpto <- read_data_dpto()
     data_dpto <- filter(data_dpto, fecha > "2021-01-01")
@@ -54,12 +54,12 @@ shinyServer(function(input, output, session){
     data_cusco <- read_data_cusco()
   })
 
-  # Valores del semÃ¡foro provincial
+  # Valores del semáforo provincial
   data_semaforo_r <- reactive({
     data_semaforo <- read_semaforo()
   })
   
-  # Valores del semÃ¡foro distrital
+  # Valores del semáforo distrital
   data_semaforo_dis_r <- reactive({
     data_semaforo_dis <- read_semaforo_dis()
   })
@@ -190,9 +190,9 @@ shinyServer(function(input, output, session){
   print(myPal5)
   
   
-  ######################################## CÃ³digo de grÃ¡ficos ----
+  ######################################## Código de gráficos ----
   
-  ### 1) CÃ³digo para graficar el semÃ¡foro COVID ----
+  ### 1) Código para graficar el semáforo COVID ----
 
   # Formato de legenda  
  valueFormatter_rounded = "function(y) {
@@ -401,7 +401,7 @@ shinyServer(function(input, output, session){
   })
   
 
-  ### 2) CÃ³digo para graficar el mapa del cusco ----
+  ### 2) Código para graficar el mapa del cusco ----
   
   # Casos totales
   
@@ -530,7 +530,7 @@ shinyServer(function(input, output, session){
       hc_chart(marginBottom  = 100)
   })
         
-  ### 3) CÃ³digo para graficar el bubble plot ----
+  ### 3) Código para graficar el bubble plot ----
   
   # datacusco_str <- distinct(bubble_data, provincia, .keep_all = TRUE) %>%
   #   mutate(x = densidad_poblacional, y = incidencia, z = poblacion)
@@ -561,7 +561,7 @@ shinyServer(function(input, output, session){
   # })
 
   
-  ## 3)  Codigo grÃ¡fico 3 (Paquete Dygraph)
+  ## 3)  Codigo gráfico 3 (Paquete Dygraph)
   
   output$plot3 <- renderDygraph({
     dygraph(data_dpto_r()[, .(fecha, total_positivo, total_recuperado, total_sintomaticos, total_defunciones)],) %>%
@@ -619,7 +619,7 @@ shinyServer(function(input, output, session){
   })
 
 
-  ## 4)  Codigo grÃ¡fico 4 (lineal) (Paquete Dygraph)
+  ## 4)  Codigo gráfico 4 (lineal) (Paquete Dygraph)
 
   output$plot4 <- renderDygraph({
     dygraph(data_dpto_r()[, .(fecha, total_positivo, total_inicio)],) %>%
@@ -674,7 +674,7 @@ shinyServer(function(input, output, session){
       dyOptions(colors = myPal2)
   })
 
-  ## 5)  Codigo grÃ¡fico 5 (logaritmo) (Paquete Dygraph)
+  ## 5)  Codigo gráfico 5 (logaritmo) (Paquete Dygraph)
   
   output$plot5 <- renderDygraph({
     dygraph(data_dpto_r()[, .(fecha, xposi, xini)],) %>%
@@ -741,7 +741,7 @@ shinyServer(function(input, output, session){
   ##############################################################################
   
   
-  ############################ CÃ³digo para graficar la data provincial ----
+  ############################ Código para graficar la data provincial ----
   
   # Grafico provincias del Cusco
   
@@ -930,7 +930,7 @@ shinyServer(function(input, output, session){
   # })  
 
   
-  ## 3)  Codigo grÃ¡fico 3 a nivel provincial (Paquete Dygraph)
+  ## 3)  Codigo gráfico 3 a nivel provincial (Paquete Dygraph)
   output$plot3_prov <- renderDygraph({
 
     shiny::req(input$prov)
@@ -990,7 +990,7 @@ shinyServer(function(input, output, session){
         dyOptions(colors = myPal5)
   })
     
-  ## 3)  Codigo grÃ¡fico 4 a nivel provincial (Paquete Dygraph)
+  ## 3)  Codigo gráfico 4 a nivel provincial (Paquete Dygraph)
   # output$plot4_prov <- renderDygraph({
   #   
   #   shiny::req(input$prov)
@@ -1048,7 +1048,7 @@ shinyServer(function(input, output, session){
   # })
   
   
-  ############################ CÃ³digo para graficar la data distrital ----
+  ############################ Código para graficar la data distrital ----
   
   
   ## Semaforo Distrital: Casos
@@ -1237,7 +1237,7 @@ shinyServer(function(input, output, session){
   # })  
   
   
-  ## 3)  Codigo grÃ¡fico 3 a nivel DISTRITAL (Paquete Dygraph)
+  ## 3)  Codigo gráfico 3 a nivel DISTRITAL (Paquete Dygraph)
   
   output$plot3_dis <- renderDygraph({
     
@@ -1299,7 +1299,7 @@ shinyServer(function(input, output, session){
   })
   
   
-  ## 3)  Codigo grÃ¡fico 4 a nivel DISTRITAL (Paquete Dygraph)
+  ## 3)  Codigo gráfico 4 a nivel DISTRITAL (Paquete Dygraph)
   
   # output$plot4_dis <- renderDygraph({
   #   

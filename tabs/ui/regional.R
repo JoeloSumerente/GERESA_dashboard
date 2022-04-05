@@ -74,7 +74,7 @@ regional <- tabPanel(title = "Nivel Regional",
                              ))
                   ),
                   
-                  tabBox(title = h4(strong("Semaforo COVID")),
+                  tabBox(title = h4(strong("Semaforo COVID (Diario)")),
                          
                          
                          
@@ -172,26 +172,26 @@ otros colores. En todo momento se deberian tomar en cuenta las medidas de seguri
 
 
 
-tabPanel("Casos antigenica",
-         tabsetPanel(
-           tabPanel("Grafico",dygraphOutput("dygraph_region_casos_antigenica"),
-                    h4(strong("Descripcion de los ejes")),
-                    p(div(strong("Eje Y: "), em("Casos positivos por prueba antigenica por COVID-19 en la Region Cusco."), style = "color:blue")),
-                    p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 13/03/2020, fecha en la cual se reporta
-                                          el primer caso confirmado por COVID-19 en la Region.", "La informacion de las ultimas 2 semanas pueden sufrir variacion debido que se encuentra en proceso de actualizacion continua por las unidades notificantes")),
-           tabPanel("Resumen", "El Semaforo COVID-19 de casos muestra
-                               el nivel de riesgo respecto al numero total de contagiados
-                               por COVID-19.", br(), br(),
-                    p("El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona
-las precauciones aumentan. En esta zona el nivel y velocidad de contagio es mucho mas elevada.
-Se recomienda salir de casa solo en casos excepcionales y tomando muy en cuenta las medidas
-de seguridad sanitaria. ", br(), br(),
-                      "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar mas
-actividades, siempre tomando en consideracion las medidas de seguridad sanitaria.", br(), br(),
-                      "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
-otros colores. En todo momento se deberian tomar en cuenta las medidas de seguridad sanitaria. 
-"))
-         )),
+# tabPanel("Casos antigenica",
+#          tabsetPanel(
+#            tabPanel("Grafico",dygraphOutput("dygraph_region_casos_antigenica"),
+#                     h4(strong("Descripcion de los ejes")),
+#                     p(div(strong("Eje Y: "), em("Casos positivos por prueba antigenica por COVID-19 en la Region Cusco."), style = "color:blue")),
+#                     p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 13/03/2020, fecha en la cual se reporta
+#                                           el primer caso confirmado por COVID-19 en la Region.", "La informacion de las ultimas 2 semanas pueden sufrir variacion debido que se encuentra en proceso de actualizacion continua por las unidades notificantes")),
+#            tabPanel("Resumen", "El Semaforo COVID-19 de casos muestra
+#                                el nivel de riesgo respecto al numero total de contagiados
+#                                por COVID-19.", br(), br(),
+#                     p("El color", strong("rojo"), "representa un nivel elevado de riesgo, en esta zona
+# las precauciones aumentan. En esta zona el nivel y velocidad de contagio es mucho mas elevada.
+# Se recomienda salir de casa solo en casos excepcionales y tomando muy en cuenta las medidas
+# de seguridad sanitaria. ", br(), br(),
+#                       "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar mas
+# actividades, siempre tomando en consideracion las medidas de seguridad sanitaria.", br(), br(),
+#                       "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
+# otros colores. En todo momento se deberian tomar en cuenta las medidas de seguridad sanitaria. 
+# "))
+#          )),
 
 
 

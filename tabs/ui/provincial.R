@@ -31,7 +31,7 @@ de seguridad sanitaria. ", br(), br(),
                                                "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar mas
 actividades, siempre tomando en consideracion las medidas de seguridad sanitaria.", br(), br(),
                                                "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
-otros colores. En todo momento se deberían tomar en cuenta las medidas de seguridad sanitaria. 
+otros colores. En todo momento se deberian tomar en cuenta las medidas de seguridad sanitaria. 
 "))
                                   )),
                          
@@ -53,7 +53,7 @@ otros colores. En todo momento se deberían tomar en cuenta las medidas de seguri
 #                                                "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar mas
 # actividades, siempre tomando en consideracion las medidas de seguridad sanitaria.", br(), br(),
 #                                                "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
-# otros colores. En todo momento se deberían tomar en cuenta las medidas de seguridad sanitaria. 
+# otros colores. En todo momento se deberian tomar en cuenta las medidas de seguridad sanitaria. 
 # "))
 #                                   )),
 #                          
@@ -76,7 +76,7 @@ de seguridad sanitaria. ", br(), br(),
                                                "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar mas
 actividades, siempre tomando en consideracion las medidas de seguridad sanitaria.", br(), br(),
                                                "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
-otros colores. En todo momento se deberían tomar en cuenta las medidas de seguridad sanitaria. 
+otros colores. En todo momento se deberian tomar en cuenta las medidas de seguridad sanitaria. 
 "))
                                     )),
                          tabPanel("Defunciones",
@@ -97,7 +97,7 @@ de seguridad sanitaria. ", br(), br(),
                                                "El color", strong("amarillo"), "representa un nivel de riesgo moderado. Aunque el riesgo aun se mantiene, se pueden realizar mas
 actividades, siempre tomando en consideracion las medidas de seguridad sanitaria.", br(), br(),
                                                "El color", strong("verde"), "representa que el nivel de riesgo no es tan elevado respecto a los
-otros colores. En todo momento se deberían tomar en cuenta las medidas de seguridad sanitaria. 
+otros colores. En todo momento se deberian tomar en cuenta las medidas de seguridad sanitaria. 
 "))
                                   )))
                          # tabPanel("Comparativo Casos",dygraphOutput("dygraph_prov_comparativo_casos")),

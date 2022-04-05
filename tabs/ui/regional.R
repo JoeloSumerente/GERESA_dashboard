@@ -225,7 +225,9 @@ exponernos al COVID-19, necesitamos cuidarnos y cuidar a los nuestros.
                                         p(div(strong("Eje Y: "), em("Total de camas disponibles para COVID-19 (UCI, NO UCI, NIVEL II), en la Region Cusco."), style = "color:blue")),
                                         p(div(strong("Eje X: "), em("dias."), style = "color:blue")),
                                         p(div(strong("UCI: "), em("Unidad de Cuidado Intensivos."), style = "color:blue")),
-                                        p(div(strong("UCIN: "), em("Unidad de Cuidados Intermedios."), style = "color:blue"))),
+                                        p(div(strong("UCIN: "), em("Unidad de Cuidados Intermedios."), style = "color:blue")),
+                                        p(div(strong("Nivel II: "), em("Comprende camas de Hospitales y establecimientos de nivel II."), style = "color:blue")),
+                                        p(div(strong("No Uci Ni UCIN: "), em("Camas de Hospitalizacion General."), style = "color:blue"))),
                                tabPanel("Resumen", "El Semaforo COVID-19 de camas muestra
                                el nivel de riesgo respecto al numero total de camas UCI,
                                NO UCI, camas de Nivel II y UCIN por COVID-19.", br(), br(),

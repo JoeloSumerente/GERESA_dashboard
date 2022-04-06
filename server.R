@@ -300,10 +300,10 @@ shinyServer(function(input, output, session){
       dySeries("NIVELII_percent", label = "% Ocupacion Nivel II") %>%
       dySeries("UCIN_percent", label = "% Ocupacion UCIN") %>%
       dyRangeSelector(dateWindow = c(data_beds()[, max(fecha) - 80], data_beds()[, max(fecha) + 1]),
-                      fillColor = c("#03045e", "#3a0ca3","#7371fc"), strokeColor = "#03045e") %>%
+                      fillColor = c("#000000", "#3a0ca3","#7371fc"), strokeColor = "#5e5b03") %>%
       dyOptions(useDataTimezone = TRUE, strokeWidth = 2,
                 fillGraph = FALSE, fillAlpha = 0.4,
-                colors = c("#03045e", "#3a0ca3","#7371fc")) %>%
+                colors = c("#000000", "#3a0ca3","#7371fc","#5e5b03")) %>%
       dyHighlight(highlightSeriesOpts = list(strokeWidth = 2.5, pointSize = 4)) %>%
       dyLegend(show = "follow", showZeroValues = TRUE, labelsDiv = NULL,
                labelsSeparateLines = FALSE, hideOnMouseOut = TRUE) %>%

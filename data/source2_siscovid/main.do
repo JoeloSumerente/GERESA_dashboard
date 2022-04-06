@@ -22,8 +22,8 @@ drop 	ubigeo
 replace distrito = ustrregexra( ustrnormalize( distrito, "nfd" ) , "\p{Mark}", "" )
 
 ** Combinar distritos y ubigeo
-merge 	m:1 distrito using "$source2_siscovid\input\ubigeo.dta"
-*merge 	m:1 distrito using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\input\ubigeo.dta"
+*merge 	m:1 distrito using "$source2_siscovid\input\ubigeo.dta"
+merge 	m:1 distrito using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\input\ubigeo.dta"
 
 ** Generar diagnosticados en otras regionaes
 gen 	dis_temp = distrito if ubigeo !=""

@@ -3,6 +3,17 @@ suppressMessages(lapply(tab_files, source))
 
 provincial <- tabPanel(title = "Nivel Provincial", 
                      value = "provincial",
+                     br(),
+                     HTML("<h1><center>Analisis de la Pandemia por COVID-19</center></h1>"),
+                     column(width = 12,
+                            br(), br(),
+                            wellPanel(
+                              HTML("El Analisis de la Pandemia por COVID-19 muestra, de forma clara y directa,
+                          informacion relevante sobre la situacion COVID en la region Cusco,
+                          para esto se presentan graficos interactivos a nivel regional,
+                          provincial y distrital.</h4>"))
+                            ),
+                            br(),
 
                      fluidRow(
                        box(title = span(icon("magic"), " Seleccione una provincia"),

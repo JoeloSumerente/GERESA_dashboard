@@ -10,8 +10,8 @@
 
 *** 1. Importar data en excel
 
-import excel "C:\Users\enemi\Documents\GitHub\GERESA_dashboard\data\source1_camas\input\disponibilidad_camas_hospitalarias.xlsx", sheet("Hoja1") firstrow clear
-*import excel "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source1_camas\input\disponibilidad_camas_hospitalarias.xlsx", sheet("Hoja1") firstrow clear
+*import excel "C:\Users\enemi\Documents\GitHub\GERESA_dashboard\data\source1_camas\input\disponibilidad_camas_hospitalarias.xlsx", sheet("Hoja1") firstrow clear
+import excel "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source1_camas\input\disponibilidad_camas_hospitalarias.xlsx", sheet("Hoja1") firstrow clear
 *import excel "$source1_camas\input\disponibilidad_camas_hospitalarias.xlsx", sheet("Hoja1") firstrow clear
 
 
@@ -26,8 +26,8 @@ format fecha %tdCCYY-NN-DD
 
 
 *export delimited using "$source1_camas\output\camas.csv", replace
-*export delimited using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source1_camas\output\camas.csv", replace
-export delimited using "C:\Users\enemi\Documents\GitHub\GERESA_dashboard\data\source1_camas\output\camas.csv", replace
+export delimited using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source1_camas\output\camas.csv", replace
+*export delimited using "C:\Users\enemi\Documents\GitHub\GERESA_dashboard\data\source1_camas\output\camas.csv", replace
 
 clear
 ********************************************************************************

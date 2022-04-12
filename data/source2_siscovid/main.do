@@ -14,7 +14,7 @@
 
 *use "$source2_siscovid\input\data_dashboard.dta", clear
 *use "C:\Users\enemi\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_dashboard.dta", clear
-use "C:\Users\enemi\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\input\data_dashboard.dta", clear
+use "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\input\data_dashboard.dta", clear
 
 drop 	ubigeo
 
@@ -23,7 +23,7 @@ replace distrito = ustrregexra( ustrnormalize( distrito, "nfd" ) , "\p{Mark}", "
 
 ** Combinar distritos y ubigeo
 *merge 	m:1 distrito using "$source2_siscovid\input\ubigeo.dta"
-merge 	m:1 distrito using "C:\Users\enemi\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\input\ubigeo.dta"
+merge 	m:1 distrito using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\input\ubigeo.dta"
 
 ** Generar diagnosticados en otras regionaes
 gen 	dis_temp = distrito if ubigeo !=""
@@ -185,7 +185,7 @@ gen segunda_ola_tasamolecular = F286.posi_molecular
 
 * Exportar a CSV
 sort ubigeo fecha
-export delimited using "C:\Users\enemi\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_distrital.csv", replace
+export delimited using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_distrital.csv", replace
 *export delimited using "$source2_siscovid\output\data_distrital.csv", replace
 
 **** Exportar en formato wide
@@ -279,7 +279,7 @@ gen segunda_ola_tasamolecular = F286.posi_molecular
 
 
 * Exportar a CSV
-export delimited using "C:\Users\enemi\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_provincial.csv", replace
+export delimited using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_provincial.csv", replace
 *export delimited using "$source2_siscovid\output\data_provincial.csv", replace
 
 **** Exportar en formato wide
@@ -374,7 +374,7 @@ gen primera_ola_tasamolecular = F188.posi_molecular
 gen segunda_ola_tasamolecular = F286.posi_molecular
 
 * Exportar a CSV
-export delimited using "C:\Users\enemi\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_regional.csv", replace
+export delimited using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_regional.csv", replace
 *export delimited using "$source2_siscovid\output\data_regional.csv", replace
 
 

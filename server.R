@@ -172,7 +172,7 @@ shinyServer(function(input, output, session){
     rgb(255, 134, 0, maxColorValue = 255),
     rgb(251, 54, 64, maxColorValue = 255),
     rgb(3, 4, 94, maxColorValue = 255))
-  print(myPal3)|
+  print(myPal3)
   
   myPal4 <- c(
     rgb(255, 134, 0, maxColorValue = 255),

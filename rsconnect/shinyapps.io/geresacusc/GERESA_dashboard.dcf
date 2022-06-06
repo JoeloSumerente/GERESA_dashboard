@@ -5,9 +5,9 @@ account: geresacusc
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5952203
-bundleId: 5975819
+bundleId: 5975960
 url: https://geresacusc.shinyapps.io/GERESA_dashboard/
-when: 1654281697.88578
-lastSyncTime: 1654281697.88578
+when: 1654285313.93844
+lastSyncTime: 1654285313.93844
 asMultiple: FALSE
 asStatic: FALSE

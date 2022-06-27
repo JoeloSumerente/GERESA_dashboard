@@ -50,7 +50,7 @@
    }
 
    if $user == 3 {
-       global path "C:\Users\enemi\Documents\GitHub\GERESA_dashboard\data" 
+       global path "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data" 
    }
 
    if $user == 4 {

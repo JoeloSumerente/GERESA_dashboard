@@ -70,6 +70,11 @@ shinyServer(function(input, output, session){
     data_camas <- read_data_beds()
   })
   
+  # hospitalizados
+  data_hosp <- reactive({
+    data_hospitalizados <- read_data_hosp()
+  })
+  
   
     # Provincial (test)
   data_corona <- reactive({
@@ -353,6 +358,72 @@ shinyServer(function(input, output, session){
       dyShading(from = "0", to = "25", color = "rgb(116, 199, 184, 0.7)", axis = "y") %>%
       dyShading(from = "25", to = "65", color = "rgb(255, 205, 163, 0.7)", axis = "y") %>%
       dyShading(from = "65", to = "150", color = "rgb(239, 79, 79, 0.7)", axis = "y")
+    
+  })
+  
+  ## hospitalizados
+  output$dygraph_region_hospitalizados <- renderDygraph({
+    
+    dygraph(data_hosp()[, .(fecha, COVID, NO_COVID)]) %>%
+      dyAxis("x", label = "Fecha") %>%
+      dyAxis("y", label = "Cantidad de hospitalizacion",valueFormatter = JS(valueFormatter_rounded) ) %>%
+      dySeries("COVID", label = "Hospitalizados COVID") %>%
+      dySeries("NO_COVID", label = "Hospitizados no COVID") %>%
+
+      dyRangeSelector(dateWindow = c(data_hosp()[, max(fecha) - 80], data_hosp()[, max(fecha) + 1]),
+                      fillColor = c("#000000", "#3a0ca3","#7371fc"), strokeColor = "#5e5b03") %>%
+      dyOptions(useDataTimezone = TRUE, strokeWidth = 2,
+                fillGraph = FALSE, fillAlpha = 0.4,
+                colors = c("#000000", "#3a0ca3","#7371fc","#5e5b03")) %>%
+      dyHighlight(highlightSeriesOpts = list(strokeWidth = 2.5, pointSize = 4)) %>%
+      dyLegend(show = "follow", showZeroValues = TRUE, labelsDiv = NULL,
+               labelsSeparateLines = FALSE, hideOnMouseOut = TRUE) %>%
+      dyCSS(textConnection("
+                  .dygraph-legend {
+                  width: 150 !important;
+                  min-width: 150px;
+                  color: #000445;
+                  background-color: rgb(250, 250, 250, 0.4) !important;
+                  padding-left:5px;
+                  border-color:#000445;
+                  border-style:solid;
+                  border-width:3px;
+                  transition:0s 2s;
+                  z-index: 80 !important;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+                  border-radius: 0px;
+                  }
+                  .dygraph-legend:hover{
+                  transform: translate(-50%);
+                  transition: 3s;
+                  }
+                
+                  .dygraph-legend > span {
+                    color: #000445;
+                    padding-left:3px;
+                    padding-right:3px;
+                    margin-left:-3px;
+                    background-color: rgb(250, 250, 250, 0.4) !important;
+                    display: block;
+                  }
+                
+                  .dygraph-legend > span:first-child {
+                    margin-top:3px;
+                  }
+
+                  .dygraph-legend > span > span{
+                    display: inline;
+                  }
+                  
+                  .highlight {
+                    border-left: 3px solid #000445;
+                    padding-left:3px !important;
+                  }
+                ")
+      ) %>%
+      dyShading(from = "0", to = "250", color = "rgb(116, 199, 184, 0.7)", axis = "y") %>%
+      dyShading(from = "250", to = "750", color = "rgb(255, 205, 163, 0.7)", axis = "y") %>%
+      dyShading(from = "750", to = "1000", color = "rgb(239, 79, 79, 0.7)", axis = "y")
     
   })
   

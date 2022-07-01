@@ -194,7 +194,7 @@ otros colores. En todo momento se deberian tomar en cuenta las medidas de seguri
 #          )),
 
 
-
+                  #Defunciones
 
                     tabPanel("Defunciones",
                              tabsetPanel(
@@ -216,7 +216,7 @@ presente, pero no es tan elevada respecto a los otros colores. En todo tiempo de
 exponernos al COVID-19, necesitamos cuidarnos y cuidar a los nuestros.
 ")
                              )),
-
+                  #Camas
 
                     tabPanel("Camas",
                              tabsetPanel(
@@ -247,7 +247,9 @@ exponernos al COVID-19, necesitamos cuidarnos y cuidar a los nuestros.
 ")
                              ))
                   )                
-                ),                
+                ),
+
+  
                                 
                 # Fila 2
 
@@ -328,10 +330,10 @@ p(strong("Nota: "), "Se aplica", em("log10"), "a las curvas para suavizar la ser
 # Fila 3
 
 fluidRow(
-  tabBox(title = h4(strong("Vacunacion")),
+  tabBox(title = h4(strong("Hospitalizados")),
          tabPanel("Ritmo",
                   tabsetPanel(
-                    tabPanel("Grafico",dygraphOutput("plot6"),
+                    tabPanel("Grafico",dygraphOutput("dygraph_region_hospitalizados"),
                              h4(strong("Descripcion de los ejes")),
                              p(div(strong("Eje Y: "), em("numero total de casos positivos, recuperados, Sintomaticos, activos y defunciones por COVID-19, en la Region."), style = "color:blue")),
                              p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 13/03/2020, fecha en la cual se reporta

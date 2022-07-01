@@ -56,6 +56,19 @@ read_data_beds <- function() {
   
 }
 
+# Data hospitalizados
+read_data_hosp <- function() {
+  
+  data_hosp_melt <- fread("https://raw.githubusercontent.com/gorecuscogrds/dashboard-covid-geresa/main/data/camas/camas.csv", sep2 = ";")
+  data_hosp_melt <- mutate(data_hosp_melt, COVID = UCI)  
+  data_hosp_melt <- mutate(data_hosp_melt, NO_COVID = NOCOVID)  
+
+  data_hosp_melt[, DateRep := lubridate::mdy(DateRep)]
+  
+  return(data_beds_melt)
+  
+}
+
 # Data valores semáforo provincial,
 read_semaforo <- function() {
   data_semaforo <- fread("https://raw.githubusercontent.com/gorecuscogrds/dashboard-covid-geresa/main/data/semaforo/traffic_light.csv")

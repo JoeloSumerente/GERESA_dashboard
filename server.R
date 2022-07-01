@@ -421,9 +421,9 @@ shinyServer(function(input, output, session){
                   }
                 ")
       ) %>%
-      dyShading(from = "0", to = "250", color = "rgb(116, 199, 184, 0.7)", axis = "y") %>%
-      dyShading(from = "250", to = "750", color = "rgb(255, 205, 163, 0.7)", axis = "y") %>%
-      dyShading(from = "750", to = "1000", color = "rgb(239, 79, 79, 0.7)", axis = "y")
+      #dyShading(from = "0", to = "250", color = "rgb(116, 199, 184, 0.7)", axis = "y") %>%
+      #dyShading(from = "250", to = "750", color = "rgb(255, 205, 163, 0.7)", axis = "y") %>%
+      #dyShading(from = "750", to = "1000", color = "rgb(239, 79, 79, 0.7)", axis = "y")
     
   })
   

@@ -70,8 +70,8 @@ read_data_hosp <- function() {
   
   data_hosp <- fread("https://raw.githubusercontent.com/Joelo21/GERESA_dashboard/main/data/source6_hospitalizados/output/hospitalizados.csv")
   data_hosp$fecha <- as.Date(data_hosp$fecha)
-  data_hosp <- mutate(data_beds, COVID = COVID*100)  
-  data_hosp <- mutate(data_beds, NO_COVID = NOCOVID*100)  
+  data_hosp <- mutate(data_hosp, COVID = COVID)  
+  data_hosp <- mutate(data_hosp, NO_COVID = NOCOVID)  
   return(data_hosp)
   
 }

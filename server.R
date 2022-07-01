@@ -366,7 +366,7 @@ shinyServer(function(input, output, session){
     
     dygraph(data_hosp()[, .(fecha, COVID, NO_COVID)]) %>%
       dyAxis("x", label = "Fecha") %>%
-      dyAxis("y", label = "Cantidad de hospitalizacion",valueFormatter = JS(valueFormatter_rounded) ) %>%
+      dyAxis("y", label = "Cantidad de hospitalizados",valueFormatter = JS(valueFormatter_rounded) ) %>%
       dySeries("COVID", label = "Hospitalizados COVID") %>%
       dySeries("NO_COVID", label = "Hospitizados no COVID") %>%
 

@@ -331,21 +331,16 @@ p(strong("Nota: "), "Se aplica", em("log10"), "a las curvas para suavizar la ser
 
 fluidRow(
   tabBox(title = h4(strong("Hospitalizados")),
-         tabPanel("Ritmo",
+         tabPanel("Frecuencia de Hospitalizados",
                   tabsetPanel(
                     tabPanel("Grafico",dygraphOutput("dygraph_region_hospitalizados"),
                              h4(strong("Descripcion de los ejes")),
-                             p(div(strong("Eje Y: "), em("numero total de casos positivos, recuperados, Sintomaticos, activos y defunciones por COVID-19, en la Region."), style = "color:blue")),
-                             p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 13/03/2020, fecha en la cual se reporta
-                                          el primer caso confirmado por COVID-19 en la Region.", "La informacion de las ultimas 2 semanas pueden sufrir variacion debido que se encuentra en proceso de actualizacion continua por las unidades notificantes")),
+                             p(div(strong("Eje Y: "), em("Numero de Hospitalazados en toda la Region del Cusco"), style = "color:blue")),
+                             p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 03/03/2022")),
                     
-                    tabPanel("Resumen","Las curvas de esta grafica muestran
-                                    la evolucion diaria del acumulado de
-                                    casos positivos, recuperados, defunciones, Sintomaticos
-                                    y activos, para la Region Cusco.", br(), br(),
-                             "Usted puede elegir apreciar el panorama mas amplio (acumulado historico) o mover el
-deslizador para apreciar la evolucion de las curvas acumuladas en los dias mas proximos a hoy.
-")
+                    tabPanel("Resumen","Se muestra la cantidad de hospitalizado por covid como tambien hospitalizados en General a lo largo de la emergenacia
+                             sanitario", br(), br(),
+                             ".")
                   ))
   )
 )

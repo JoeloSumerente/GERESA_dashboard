@@ -100,9 +100,11 @@
 
    local parte2Do       0
 
-   if (`parte2Do' == 1) { //Change the local above to run or not to run this file
+   if (`parte2Do' == 0) { //Change the local above to run or not to run this file
        do "$source1_camas/main.do"
    }
+   
+ 
  
 
 	  

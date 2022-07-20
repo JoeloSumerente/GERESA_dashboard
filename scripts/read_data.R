@@ -76,6 +76,17 @@ read_data_hosp <- function() {
   
 }
 
+# Data vacunas proporcion 
+# read_data_hvacun <- function() {
+#   
+#   data_hvacun <- fread("https://raw.githubusercontent.com/Joelo21/GERESA_dashboard/main/data/source6_hospitalizados/output/hospitalizados.csv")
+#   data_hvacun$fecha <- as.Date(data_hvacun$fecha)
+#   data_hvacun <- mutate(data_hosp, COVID = COVID)  
+#   data_hvacun <- mutate(data_hosp, NO_COVID = NOCOVID)  
+#   return(data_hvacun)
+#   
+# }
+
 # Data valores semáforo provincial,
 read_semaforo <- function() {
   data_semaforo <- fread("https://raw.githubusercontent.com/Joelo21/GERESA_dashboard/main/data/source3_semaforo/traffic_light.csv")

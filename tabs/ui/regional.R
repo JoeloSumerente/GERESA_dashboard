@@ -327,7 +327,7 @@ p(strong("Nota: "), "Se aplica", em("log10"), "a las curvas para suavizar la ser
                  #   
 
 
-# Fila 3
+#HOSPITALIZADOS
 
 fluidRow(
   tabBox(title = h4(strong("Hospitalizados")),
@@ -337,15 +337,32 @@ fluidRow(
                              h4(strong("Descripcion de los ejes")),
                              p(div(strong("Eje Y: "), em("Numero de Hospitalazados en toda la Region del Cusco"), style = "color:blue")),
                              p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 03/03/2022")),
-                    
+
                     tabPanel("NO COVID",dygraphOutput("dygraph_region_hospitalizadosNC"),
                              h4(strong("Descripcion de los ejes")),
                              p(div(strong("Eje Y: "), em("Numero de Hospitalazados en toda la Region del Cusco"), style = "color:blue")),
                              p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 03/03/2022")),
                   ))
   )
-)
-                   
+),
+#####
 
+# fluidRow(
+#   tabBox(title = h4(strong("Hospitalizadfgdfos")),
+#          tabPanel("Frecuencia de Hospitalizados",
+#                   tabsetPanel(
+#                     tabPanel("COVID",dygraphOutput("dygraph_region_hospitalizadosC"),
+#                              h4(strong("Descripcion de los ejes")),
+#                              p(div(strong("Eje Y: "), em("Numero de Hospitalazados en toda la Region del Cusco"), style = "color:blue")),
+#                              p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 03/03/2022")),
+#                     
+#                     tabPanel("NO COVID",dygraphOutput("dygraph_region_hospitalizadosNC"),
+#                              h4(strong("Descripcion de los ejes")),
+#                              p(div(strong("Eje Y: "), em("Numero de Hospitalazados en toda la Region del Cusco"), style = "color:blue")),
+#                              p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 03/03/2022")),
+#                   ))
+#   )
+# )
 )
 )
+

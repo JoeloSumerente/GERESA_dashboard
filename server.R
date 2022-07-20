@@ -534,6 +534,20 @@ shinyServer(function(input, output, session){
     
   })
   
+  # ## VACUNADOS HOSPITALIZADOS PROPORCION
+  # 
+  # output$graficoProVa <- renderDygraph({
+  #  
+  #   specie <- c(rep("Hospitalizados" , 3) , rep("UCI" , 3) , rep("Fallecidos" , 3) , rep("Alta Hospitalaria" , 3) )
+  #   condition <- rep(c("No Inmunizados" , "Primera dosis" , "Segunda Dosis" , "Tercera Dosis") , 4)
+  #   value <- abs(rnorm(12 , 0 , 15))
+  #   data <- data.frame(specie,condition,value)
+  #   
+  #   ggplot(data, aes(fill=condition, y=value, x=specie)) + 
+  #     geom_bar(position="fill", stat="identity")
+  #   
+  # })
+  
 
   ### 2) Código para graficar el mapa del cusco ----
   

@@ -28,6 +28,7 @@ library(geojsonR)
 library(waiter)
 library(rsconnect)
 library(dygraphs)
+library(ggplot2)
 
 
 ##--utilidades  ----

@@ -31,6 +31,7 @@ library(dygraphs)
 library(ggplot2)
 
 
+
 ##--utilidades  ----
 colores <- c("#098ebb", "#fdc23a", "#e96449", "#818286")
 

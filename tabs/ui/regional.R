@@ -342,9 +342,21 @@ fluidRow(
                              h4(strong("Descripcion de los ejes")),
                              p(div(strong("Eje Y: "), em("Numero de Hospitalazados en toda la Region del Cusco"), style = "color:blue")),
                              p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 03/03/2022")),
-                  ))
+                    tabPanel("Grafico1",dygraphOutput(""),
+                             h4(strong("Descripcion de los ejes")),
+                             p(div(strong("Eje Y: "), em("Numero de Hospitalazados en toda la Region del Cusco"), style = "color:blue")),
+                             p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 03/03/2022")),
+                    tabPanel("Grafico2",dygraphOutput(""),
+                             h4(strong("Descripcion de los ejes")),
+                             p(div(strong("Eje Y: "), em("Numero de Hospitalazados en toda la Region del Cusco"), style = "color:blue")),
+                             p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 03/03/2022")),
+                    tabPanel("Grafico3",dygraphOutput(""),
+                             h4(strong("Descripcion de los ejes")),
+                             p(div(strong("Eje Y: "), em("Numero de Hospitalazados en toda la Region del Cusco"), style = "color:blue")),
+                             p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 03/03/2022")),
+                  # ))
   )
-),
+)
 #####
 
 # fluidRow(
@@ -355,14 +367,16 @@ fluidRow(
 #                              h4(strong("Descripcion de los ejes")),
 #                              p(div(strong("Eje Y: "), em("Numero de Hospitalazados en toda la Region del Cusco"), style = "color:blue")),
 #                              p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 03/03/2022")),
-#                     
+# 
 #                     tabPanel("NO COVID",dygraphOutput("dygraph_region_hospitalizadosNC"),
 #                              h4(strong("Descripcion de los ejes")),
 #                              p(div(strong("Eje Y: "), em("Numero de Hospitalazados en toda la Region del Cusco"), style = "color:blue")),
 #                              p(div(strong("Eje X: "), em("dias."), style = "color:blue"), "El primer dia de la serie corresponde al 03/03/2022")),
 #                   ))
 #   )
-# )
 )
 )
+)
+)
+
 

@@ -30,43 +30,26 @@
    * --------------------
 
    *Número de usuario:
-   * Brandon Oficina GORE		1
-   * Brandon Casa				2
-   * Johar						3
-   * Jason						4
+   * Nombre de Usuario 1
+
 
    *Establecer este valor para el usuario que actualmente usa el script
-   global user  3
+   global user  1
 	
    * Definir Globales
    * ---------------------
 
    if $user == 1 {
-       global path "D:/Documents/GitHub/dashboard-covid-geresa/data"
+       global path "C:\Users\DEI-02\Documents\GitHub\GERESA_dashboard\data"
    }
-
-   if $user == 2 {
-       global path "/Users/bran/Documents/GitHub/dashboard-covid-geresa/data" 
-   }
-
-   if $user == 3 {
-       global path "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data" 
-   }
-
-   if $user == 4 {
-       global path "C:\Users\DEI-02\Documents\GitHub\GERESA_dashboard\data" 
-   }
+  
    
-   if $user == 5 {
-       global path "C:\Users\user\Documents\GitHub\GERESA_dashboard\data" 
-   }
-   
-   
-	global main					"$path"
-	global source1_camas		"$path/source1_camas"
-	global source2_siscovid		"$path/source2_siscovid"
-	global source3_semaforo		"$path/source3_semaforo"
-	global source4_mapas		"$path/source4_mapas"
+	global main						"$path"
+	global source1_camas			"$path/source1_camas"
+	global source2_siscovid			"$path/source2_siscovid"
+	global source3_semaforo			"$path/source3_semaforo"
+	global source4_mapas			"$path/source4_mapas"
+	global source6_hospitalizados	"$path/source6_hospitalizados"
 
 	set more off, permanent  	
 	
@@ -104,7 +87,20 @@
        do "$source1_camas/main.do"
    }
    
- 
- 
+    * ******************************************************************** *
+   *
+   *       PARTE 3:  GENERAR DATA HOSPITALIZADOS
+   *
+   *		Input:	"$source6_hospitalizados/input/hospitalizados_covid_nocovid.xlsx"
+   *
+   *		Output:	"$source6_hospitalizados/output/hospitalizados.csv"
+   *
+   * ******************************************************************** *
+   
+ local parte3do  	1
+
+    if (`parte2Do' == 1) { //Change the local above to run or not to run this file
+       do "$\source6_hospitalizados/main.do"
+   }
 
 	  

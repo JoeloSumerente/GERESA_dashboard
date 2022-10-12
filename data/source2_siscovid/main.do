@@ -12,8 +12,11 @@
 
 *** 1. Pasos previos
 
-*use "$source2_siscovid\input\data_dashboard.dta", clear
-use "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\input\data_dashboard.dta", clear
+**** PATH
+use "$source2_siscovid\input\data_dashboard.dta", clear
+
+**** OTHER PATH
+*use "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\input\data_dashboard.dta", clear
 *use "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\input\data_dashboard.dta", clear
 
 drop 	ubigeo
@@ -21,9 +24,9 @@ drop 	ubigeo
 ** Quitar acentos a nombres de distritos
 replace distrito = ustrregexra( ustrnormalize( distrito, "nfd" ) , "\p{Mark}", "" )
 
-** Combinar distritos y ubigeo
-*merge 	m:1 distrito using "$source2_siscovid\input\ubigeo.dta"
-merge 	m:1 distrito using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\input\ubigeo.dta"
+** Combinar distritos y ubigeo "PATH"
+merge 	m:1 distrito using "$source2_siscovid\input\ubigeo.dta"
+*merge 	m:1 distrito using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\input\ubigeo.dta"
 
 ** Generar diagnosticados en otras regionaes
 gen 	dis_temp = distrito if ubigeo !=""
@@ -185,11 +188,15 @@ gen segunda_ola_tasamolecular = F286.posi_molecular
 
 * Exportar a CSV
 sort ubigeo fecha
-export delimited using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_distrital.csv", replace
-*export delimited using "$source2_siscovid\output\data_distrital.csv", replace
+
+**** PATH
+export delimited using "$source2_siscovid\output\data_distrital.csv", replace
+
+**** OTHER PATH
+*"C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_distrital.csv", replace
+
 
 **** Exportar en formato wide
-
 *drop provincia_ubigeo departamento_ubigeo provincia distrito departamento total_positivo total_positivo_rapida total_positivo_molecular total_muestra total_muestra_rapida total_muestra_molecular total_recuperado total_sintomaticos total_defunciones total_inicio total_inicio_molecular total_inicio_rapida dis dias primera_ola_positivo segunda_ola_positivo primera_ola_defunciones segunda_ola_defunciones primera_ola_tasamolecular segunda_ola_tasamolecular
 
 *reshape wide positivo positivo_rapida positivo_molecular muestra muestra_rapida muestra_molecular sintomaticos defunciones inicio inicio_molecular inicio_rapida recuperado posi posi_rapida posi_molecular, i(fecha) j(ubigeo) string
@@ -277,14 +284,15 @@ gen segunda_ola_defunciones = F310.defunciones
 gen primera_ola_tasamolecular = F188.posi_molecular
 gen segunda_ola_tasamolecular = F286.posi_molecular
 
+**** PATH
+export delimited using "$source2_siscovid\output\data_provincial.csv", replace
 
-* Exportar a CSV
-export delimited using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_provincial.csv", replace
-*export delimited using "$source2_siscovid\output\data_provincial.csv", replace
+* OTHER PATH - Exportar a CSV
+*export delimited using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_provincial.csv", replace
+
 
 **** Exportar en formato wide
 *replace provincia = subinstr(provincia, " ", "", .)
-
 *drop provincia_ubigeo total_positivo total_positivo_rapida total_positivo_molecular total_muestra total_muestra_rapida total_muestra_molecular total_recuperado total_sintomaticos total_defunciones total_inicio total_inicio_molecular total_inicio_rapida prov dias primera_ola_positivo segunda_ola_positivo primera_ola_defunciones segunda_ola_defunciones primera_ola_tasamolecular segunda_ola_tasamolecular
 
 *reshape wide positivo positivo_rapida positivo_molecular muestra muestra_rapida muestra_molecular sintomaticos defunciones inicio inicio_molecular inicio_rapida recuperado posi posi_rapida posi_molecular, i(fecha) j(provincia) string
@@ -373,9 +381,8 @@ gen segunda_ola_defunciones = F310.defunciones
 gen primera_ola_tasamolecular = F188.posi_molecular
 gen segunda_ola_tasamolecular = F286.posi_molecular
 
-* Exportar a CSV
-export delimited using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_regional.csv", replace
-*export delimited using "$source2_siscovid\output\data_regional.csv", replace
+**** PATH
+export delimited using "$source2_siscovid\output\data_regional.csv", replace
 
-
-********************************************************************************
+***** OTHER PATH - Exportar a CSV
+*export delimited using "C:\Users\pc\Documents\GitHub\GERESA_dashboard\data\source2_siscovid\output\data_regional.csv", replace

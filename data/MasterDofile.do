@@ -34,13 +34,14 @@
 
 
    *Establecer este valor para el usuario que actualmente usa el script
+   *C:\Users\DEIS-02\Documents\GitHub\GERESA_dashboard\data
    global user  1
 	
    * Definir Globales
    * ---------------------
 
    if $user == 1 {
-       global path "C:\Users\Joelo\Documents\GitHub\GERESA_dashboard\data"
+       global path "C:\Users\DEIS-02\Documents\GitHub\GERESA_dashboard\data"
    }
   
    

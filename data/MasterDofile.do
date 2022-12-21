@@ -40,7 +40,7 @@
    * ---------------------
 
    if $user == 1 {
-       global path "C:\Users\DEI-02\Documents\GitHub\GERESA_dashboard\data"
+       global path "C:\Users\Joelo\Documents\GitHub\GERESA_dashboard\data"
    }
   
    
